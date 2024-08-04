@@ -1,0 +1,9 @@
+*.txt
+*.rest
+Server/node_modules
+.vscode
+Other Media/images
+ENV Files/
+CSS Files/Tests/
+JS Files/Tests/
+HTML Files/Tests/

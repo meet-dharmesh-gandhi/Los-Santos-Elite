@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="../CSS Files/show-cart-page.css">
+  <link rel="stylesheet" href="../CSS Files/loader.css">
+  <title>User Cart</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a64c0c2b08.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+<span id="loader"></span>
+  <div id="userName" style="display: none;"></div>
+  <div id="userEmail" style="display: none;"></div>
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">LS Real Estate</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="../HTML Files/ls-real-estate.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Help</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page"><i class="fa-solid fa-cart-shopping cart"></i></a>
+        </li>
+        <li class="nav-item">
+          <div class="box1" id="box1">
+              <img id="userProfilePicture" src="" alt="">
+          </div>
+      </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<section class="carts">
+<h1 class="showCart">Your Cart</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-9">
+      <div class="box" id="cart">
+        <h1>Items List</h1>
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <div class="paymentBox">
+        <h1>Payment Details</h1>
+        <hr class="line">
+        <div class="prices">
+          <div class="amounts">
+            <p>Subtotal</p>
+            <p id="sub-total">4000</p>
+          </div>
+          <hr class="line1">
+          <div class="amounts1">
+            <p class="tax">Tax</p>
+            <p class="taxAmount" id="tax">400</p>
+          </div>
+          <hr class="line1">
+          <div class="amounts2">
+            <p class="cf">Convenience Fees</p>
+            <p class="cfAmount" id="convenience-fees">40</p>
+          </div>
+          <hr class="line1">
+          <div class="amounts3">
+            <p class="total">Total</p>
+            <p class="totalAmount" id="total-amount">4440</p>
+          </div>
+        </div>
+        <button class="btn btn-primary col-lg-10 ms-4 checkout-button">Proceed to Checkout</button>
+        <h5>Only one step left towards your dream home</h3>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+</body>
+<script src="../JS Files/show-cart-page.js" defer type="module"></script>
+</html>

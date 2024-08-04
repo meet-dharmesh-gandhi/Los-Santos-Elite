@@ -1,0 +1,353 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+font-family: "GTA-Font";
+src: url("../Other\ Media/Fonts/GTA-Fonts.ttf");
+}
+
+@font-face {
+font-family: "Luxury";
+src: url("../Other\ Media/Fonts/Agraham.otf");
+}
+
+#loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    border-top: 4px solid #FFF;
+    border-right: 4px solid transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+  
+#loader::after {
+    content: '';  
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border-left: 4px solid #FF3D00;
+    border-bottom: 4px solid transparent;
+    animation: rotation 0.5s linear infinite reverse;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+body {
+    background-color: antiquewhite !important;
+}
+
+.navbar {
+    position: fixed !important;
+    top: 0px;
+    left: 2.5%;
+    width: 95%;
+    height: 80px;
+    z-index: 3 !important;
+    transition: top 0.3s;
+    background-color: darkblue;
+    border-radius: 0px 0px 100px 100px;
+    -webkit-box-shadow: 0px 0px 18px 10px rgba(128,128,128,1);
+    -moz-box-shadow: 0px 0px 18px 10px rgba(128,128,128,1);
+    box-shadow: 0px 0px 18px 10px rgba(128,128,128,1);
+}
+
+.navbar.fixed {
+    top: 0px;
+}
+
+.navbar-brand {
+    font-family: "Luxury";
+    color: wheat !important;
+    margin-left: 10px;
+}
+
+.navbar-nav a {
+    font-family: "Rubik", sans-serif;
+    color: white !important;
+    margin-right: 25px;
+    font-size: 20px;
+}
+
+.navbar-brand:hover, .navbar-nav a:hover {
+    color: orange !important;
+}
+
+.box1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 41px;
+    width: 42px;
+    border: 2px solid white;
+    border-radius: 80%;
+    margin-top: 3px;
+}
+
+.box1 img {
+    height: 39px;
+    width: 40px;
+    border-radius: 80%;
+}
+
+.box2 {
+    display: none;
+}
+
+.userProfilePicture {
+    border-radius: 50%;
+}
+
+.showCart {
+    margin-top: 90px;
+    padding: 20px 0px 30px 50px;
+}
+
+.paymentBox {
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    height: 450px;
+    width: 320px;
+    top: 20%;
+    margin-left: 50px;
+    border-radius: 20px;
+    background: ivory;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(120,123,143,1);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(120,123,143,1);
+    box-shadow: 10px 10px 5px 0px rgba(120,123,143,1);
+}
+
+.paymentBox h1 {
+    font-size: 30px;
+    font-family: "Rubik", sans-serif;
+    margin-top: 10px;
+    text-align: center;
+    color: black;
+}
+
+.line {
+    height: 2px !important;
+    background-color: gray;
+    margin: 5px 20px 8px 20px;
+}
+
+.prices {
+    padding: 20px;
+    font-family: "Rubik", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 17px;
+}
+
+.prices p {
+    margin-bottom: 8px;
+    margin-top: 8px;
+    color: black;
+}
+
+.line1 {
+    height: 2px !important;
+    background-color: gray;
+    margin: 0px 5px;
+}
+
+.amounts, .amounts1, .amounts2, .amounts3 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.amounts1, .amounts2, .amounts3 {
+    justify-content: space-between;
+}
+
+.cf {
+    width: 200px;
+    line-height: 18px;
+}
+
+.total, .totalAmount {
+    font-weight: bold;
+}
+
+.checkout-button {
+    height: 45px !important;
+    margin-top: 10px;
+    font-family: "Rubik", sans-serif;
+    border-radius: 10px !important;
+    transition: transform 0.4s ease, border-radius 0.4s ease, background-color 0.4s ease !important;
+}
+
+.checkout-button:hover {
+    background-color: rgb(70, 203, 70) !important;
+    transform: scale(1.05);
+    border-radius: 25px !important;
+}
+
+h5 {
+    text-align: center;
+    margin-top: 30px !important;
+    font-family: "Rubik", sans-serif;
+    width: 80%;
+    margin-left: 28px;
+}
+
+
+
+
+/* for the createItemCard function */
+
+.cart {
+    font-size: 25px;
+    margin-top: 2px;
+    margin-top: 3px;
+}
+
+.box {
+    height: fit-content;
+    border: 2px solid black;
+    padding: 20px;
+    background-color: ivory;
+}
+
+.cards {
+    height: fit-content;
+    width: 100%;
+    border: 2px solid black;
+    margin-top: 20px;
+    display: flex;
+    background-color: white;
+}
+
+.showCart, .box h1 {
+    font-family: "Rubik", sans-serif;
+}
+
+.image {
+    width: 35%;
+}
+
+.image img {
+    border: 2px solid black;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, border-radius 0.3s ease;
+}
+
+.image img:hover {
+    transform: scale(1.05);
+    border-radius: 500px;
+}
+
+.details {
+    border: 2px solid black;
+    width: 65%;
+    padding: 20px;
+}
+
+.line2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.cardPrice {
+    margin-top: 5%;
+    margin-right: 5%;
+}
+
+.heading {
+    padding: 20px;
+}
+
+.configurations {
+    padding: 5px;
+    font-size: 18px;
+    margin: 35px 0px 8px 0px;
+}
+
+.details li {
+    font-size: 16px;
+}
+
+.area {
+    font-size: 16px;
+    line-height: 1px;
+    margin-left: 4px;
+}
+
+.remove-button {
+    padding: 10px 20px;
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: border-radius 0.5s ease, transform 0.5s ease;
+}
+
+.remove-button:hover {
+    background-color: #ff1f1f;
+    border-radius: 25px;
+    transform: scale(1.10);
+}
+
+.price-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 4px solid #FFF;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+#loader::after {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border-left: 4px solid #FF3D00;
+  border-bottom: 4px solid transparent;
+  animation: rotation 0.5s linear infinite reverse;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

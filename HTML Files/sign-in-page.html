@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../CSS Files/sign-in-page.css">
+</head>
+
+<body>
+  <div class="box">
+    <div class="content col-6 col-md-6 col-lg-6">
+      <h1>Los Sentos Elite</h1>
+      <h2>Welcome</h2>
+      <p>Back!</p>
+      <div class="form-floating mb-3 input1">
+        <input type="email" class="form-control" id="userName" placeholder="username">
+        <label for="username">User Name</label>
+      </div>
+      <div class="form-floating input2">
+        <input type="password" class="form-control" id="password" placeholder="Password">
+        <label for="password">Password</label>
+      </div>
+      <p class="signUp">New here ? <a href="../HTML Files/sign-up-page.html">Sign Up</a></p>
+      <button class="btn btn-primary col-lg-4 signIn" id="sign-in">Sign In</button>
+      <div class="google" id="loginButton">
+        <img src="../Other Media/images/file.png" alt="" height="30px" width="30px">
+        <p class="continue">Continue with Google</p>
+      </div>
+    </div>
+    <div class="image col-6 col-md-6 col-lg-6" id="container">
+      <img src="../Other Media/images/astronaut.png" alt="">
+      <p>Hey, great to see you back BUDDY !</p>
+    </div>
+  </div>
+  <div id="userEmail" style="display: none"></div>
+  <div id="userProfilePicture" style="display: none"></div>
+
+  <button type="button" class="btn btn-primary" id="liveToastBtn" style="display: none">Show live toast</button>
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+    <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto">Los Sentos Elite</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        New Account created ! Please SignIn with it.
+      </div>
+    </div>
+  </div>
+</body>
+<script src="../OAuth/firebase-connect.js" defer type="module"></script>
+<script src="../JS Files/sign-in-page.js" defer type="module"></script>
+
+</html>
