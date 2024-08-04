@@ -1,15 +1,9 @@
-building images/
-Code To Merge/
-GTA Website/
-temp/
 *.txt
-Combined Website/node_modules
-Combined Website/Server/node_modules
-Combined Website/.vscode
-Combined Website/Other Media/images
-Combined Website/ENV Files
-Combined Website/*.json
-Combined Website/CSS Files/Tests/
-Combined Website/JS Files/Tests/
-Combined Website/HTML Files/Tests/
 *.rest
+Server/node_modules
+.vscode
+Other Media/images
+ENV Files
+CSS Files/Tests/
+JS Files/Tests/
+HTML Files/Tests/
