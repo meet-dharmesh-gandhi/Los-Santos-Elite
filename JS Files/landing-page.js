@@ -78,25 +78,25 @@ image.addEventListener("click", () => {
 
 let realEstateBtn = document.querySelector(".real-estate");
 realEstateBtn.addEventListener("click", () => {
-  window.location.href = "../HTML Files/sign-up-page.html?goto=real-estate";
+  window.location.href = "./HTML Files/sign-up-page.html?goto=real-estate";
 });
 
 let superCarsBtn = document.querySelector(".super-cars");
 superCarsBtn.addEventListener("click", () => {
-  window.location.href = "../HTML Files/sign-up-page.html?goto=super-cars";
+  window.location.href = "./HTML Files/sign-up-page.html?goto=super-cars";
 });
 
 let signInBtn = document.querySelector(".signIn");
 signInBtn.addEventListener("click", () => {
-  window.location.href = "../HTML Files/sign-in-page.html?goto=none";
+  window.location.href = "./HTML Files/sign-in-page.html?goto=none";
 });
 
 let signUpBtn = document.querySelector(".signUp");
 signUpBtn.addEventListener("click", () => {
-  window.location.href = "../HTML Files/sign-up-page.html?goto=none";
+  window.location.href = "./HTML Files/sign-up-page.html?goto=none";
 });
 
 let sellButton = document.querySelector(".sell-button");
 sellButton.addEventListener("click", () => {
-  window.location.href = "../HTML Files/sign-up-page.html?goto=sell";
+  window.location.href = "./HTML Files/sign-up-page.html?goto=sell";
 })

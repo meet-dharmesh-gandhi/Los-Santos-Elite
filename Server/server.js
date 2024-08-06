@@ -17,6 +17,7 @@ dotenv.config({ path: path.join(__dirname, "../ENV Files/.env") });
 
 const app = express();
 const port = 3000;
+const SERVER_URL = "https://los-santos-elite-1.onrender.com";
 
 const HOST_URL = process.env.HOST_URL;
 const MERCHANT_ID = process.env.MERCHANT_ID;
@@ -37,9 +38,15 @@ app.use(session({
 	cookie: { secure: false, sameSite: true }
 }));
 
+
 app.use(cors({
-	origin: 'http://127.0.0.1:5500',
-	credentials: true
+  origin: ["https://los-santos-elite5.vercel.app", "http://127.0.0.1:5500"],
+  credentials: true
+}));
+
+app.options('*', cors({
+  origin: ["https://los-santos-elite5.vercel.app", "http://127.0.0.1:5500"],
+  credentials: true
 }));
 
 app.use(cookieParser());
@@ -685,6 +692,7 @@ app.post("/user-email-exists", async (req, res) => {
 })
 
 app.post("/login", async (req, res) => {
+	res.setHeader('Access-Control-Allow-Origin', 'https://los-santos-elite5.vercel.app');
 	try {
 		let { userName, userEmail, userProfilePicture } = req.body;
 		if (userProfilePicture === "default") {
@@ -713,6 +721,7 @@ app.get("/get-user-details", authenticateToken, async (req, res) => {
 });
 
 app.post("/add-new-user", async (req, res) => {
+	res.setHeader('Access-Control-Allow-Origin', 'https://los-santos-elite5.vercel.app');
 	try {
 		const existence = await checkUserExistence({ username: req.body.username });
 		if (existence.length == 0) {
@@ -728,6 +737,7 @@ app.post("/add-new-user", async (req, res) => {
 });
 
 app.post("/check-user-existence", async (req, res) => {
+	res.setHeader('Access-Control-Allow-Origin', 'https://los-santos-elite5.vercel.app');
 	try {
 		const existence = await checkUserExistence(req.body);
 		if (existence.length == 0) {
@@ -1216,7 +1226,7 @@ app.get("/pay/:amount", async (req, res) => {
 		merchantUserId: "MUID" + userId,
 		name: "meet",
 		amount,
-		redirectUrl: `http://localhost:${port}/redirect-url/${merchantTransactionId}`,
+		redirectUrl: `${SERVER_URL}/redirect-url/${merchantTransactionId}`,
 		redirectMode: "POST",
 		mobileNumber: "9999999999",
 		paymentInstrument: { type: "PAY_PAGE" },
@@ -1299,7 +1309,7 @@ app.get("/pay-premium/:amount", async (req, res) => {
 		merchantTransactionId: merchantTransactionId,
 		merchantUserId: userId,
 		amount,
-		redirectUrl: `http://localhost:${port}/premium-redirect-url/${merchantTransactionId}/${amount}`,
+		redirectUrl: `${SERVER_URL}/premium-redirect-url/${merchantTransactionId}/${amount}`,
 		redirectMode: "REDIRECT",
 		mobileNumber: "9999999999",
 		paymentInstrument: { type: "PAY_PAGE" },

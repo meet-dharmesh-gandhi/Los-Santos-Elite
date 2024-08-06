@@ -2,6 +2,8 @@ const urlParams = new URLSearchParams(window.location.search);
 const newAccount = urlParams.get("new-account");
 const nextPage = urlParams.get("goto");
 
+const SERVER_URL = "https://los-santos-elite-1.onrender.com";
+
 
 if (newAccount === "true") {
   let toast = document.querySelector("#liveToastBtn");
@@ -53,7 +55,7 @@ animationEnd.addEventListener("animationend", () => {
 
 const checkUserExistence = async (username, password) => {
   try {
-    const response = await fetch("http://localhost:3000/check-user-existence", {
+    const response = await fetch(`${SERVER_URL}/check-user-existence`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -67,7 +69,7 @@ const checkUserExistence = async (username, password) => {
     if (data === "Incorrect Username or Password") {
       alert("Incorrect Username or Password");
     } else {
-      const setUserDetails = await fetch("http://localhost:3000/login", {
+      const setUserDetails = await fetch(`${SERVER_URL}/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -88,13 +90,13 @@ const checkUserExistence = async (username, password) => {
 
 const redirectUser = () => {
   if (nextPage === "real-estate") {
-    window.location.href = "../HTML Files/ls-real-estate.html";
+    window.location.href = "./ls-real-estate.html";
   } else if (nextPage === "super-cars") {
-    window.location.href = "../HTML Files/ls-super-cars.html";
+    window.location.href = "./ls-super-cars.html";
   } else if (nextPage === "sell") {
-    window.location.href = "../HTML Files/sell-page.html";
+    window.location.href = "./sell-page.html";
   } else {
-    window.location.href = "../HTML Files/main-page.html";
+    window.location.href = "./main-page.html";
   }
 }
 

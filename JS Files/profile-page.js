@@ -1,6 +1,8 @@
 const loader = document.querySelector("#loader");
 let userDetails;
 let username;
+const SERVER_URL = "https://los-santos-elite-1.onrender.com/";
+
 
 const setUserDetails = (userDetails) => {
 	if (userDetails.userName) {
@@ -23,7 +25,7 @@ async function getUserDetails() {
 	loader.style.display = "block";
 	const token = localStorage.getItem("user details token");
 	try {
-		const getUserDetails = await fetch("http://localhost:3000/get-user-details", {
+		const getUserDetails = await fetch(`${SERVER_URL}/get-user-details`, {
 			headers: { "Authorization": `Bearer ${token}` },
 		});
 		if (!getUserDetails.ok) {
@@ -131,7 +133,7 @@ withdraw.addEventListener("click", () => {
 const getTransactionHistory = async () => {
 	try {
 		const response = await fetch(
-			"http://localhost:3000/get-transaction-history",
+			`${SERVER_URL}/get-transaction-history`,
 			{
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
@@ -149,7 +151,7 @@ const getTransactionHistory = async () => {
 };
 
 const getLikedCards = async (username) => {
-	const response = await fetch("http://localhost:3000/get-liked-properties", {
+	const response = await fetch(`${SERVER_URL}/get-liked-properties`, {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",
@@ -164,7 +166,7 @@ const getLikedCards = async (username) => {
 
 const getUserListings = async () => {
 	try {
-		const response = await fetch("http://localhost:3000/get-user-listings", {
+		const response = await fetch(`${SERVER_URL}/get-user-listings`, {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json"
@@ -179,7 +181,7 @@ const getUserListings = async () => {
 }
 
 const checkSeller = async () => {
-	const seller = await fetch("http://localhost:3000/check-if-seller", {
+	const seller = await fetch(`${SERVER_URL}/check-if-seller`, {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",
@@ -353,7 +355,7 @@ const numberToString = (number) => {
 const addToWishlist = async (propertyName, userName) => {
 	try {
 		const userName = document.getElementById("userName");
-		const response = await fetch("http://localhost:3000/add-to-wishlist", {
+		const response = await fetch(`${SERVER_URL}/add-to-wishlist`, {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
@@ -370,7 +372,7 @@ const addToWishlist = async (propertyName, userName) => {
 const removeFromWishlist = async (propertyName, userName) => {
 	try {
 		const userName = document.getElementById("userName");
-		const response = await fetch("http://localhost:3000/remove-from-wishlist", {
+		const response = await fetch(`${SERVER_URL}/remove-from-wishlist`, {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
@@ -564,7 +566,7 @@ const saveChanges = async (Name, Username, Email, Phone) => {
 	const newPhone = Phone === "Enter Your Phone Number" ? userDetails.userPhone : Phone;
 	const newDetails = { prevUsername: (userDetails.userName), Username: newUsername, Name: newName, Email: newEmail, Phone: newPhone };
 	console.log(newDetails);
-	const response = await fetch("http://localhost:3000/set-new-values", {
+	const response = await fetch(`${SERVER_URL}/set-new-values`, {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",
@@ -581,7 +583,7 @@ const saveChanges = async (Name, Username, Email, Phone) => {
 const sendOTP = async (username, email) => {
 	console.log(username);
 	console.log(email);
-	const response = await fetch("http://localhost:3000/send-otp", {
+	const response = await fetch(`${SERVER_URL}/send-otp`, {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",
@@ -595,7 +597,7 @@ const sendOTP = async (username, email) => {
 }
 
 const verifyOTP = async (username, OTP) => {
-	const response = await fetch("http://localhost:3000/verify-otp", {
+	const response = await fetch(`${SERVER_URL}/verify-otp`, {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",
@@ -627,7 +629,7 @@ confirmOTP.addEventListener("click", async () => {
 			const saved = await saveChanges(document.querySelector(".name-input").textContent, document.querySelector(".userName-input").textContent, document.querySelector(".userEmail").textContent, document.querySelector(".userPhoneNumber").textContent);
 			if (saved) {
 				document.querySelector(".enter-otp-page").classList.add("hide");
-				const setUserDetails = await fetch("http://localhost:3000/login", {
+				const setUserDetails = await fetch(`${SERVER_URL}/login`, {
 					method: "POST",
 					headers: {
 						"Content-Type": "application/json",
