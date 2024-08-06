@@ -117,23 +117,29 @@ const testProperties = {};
 const secretKey = process.env.SESSION_SECRET_KEY;
 
 app.use(session({
-	secret: secretKey,
-	resave: false,
-	saveUninitialized: false,
-	cookie: { secure: false, sameSite: true }
+    secret: secretKey,
+    resave: false,
+    saveUninitialized: false,
+    cookie: { secure: false, sameSite: true }
 }));
 
 app.use(cors({
-	origin: ['http://127.0.0.1:5500', 'https://los-santos-elite-bbb4.vercel.app'],
-	credentials: true,
-	methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-	allowedHeaders: ['Content-Type', 'Authorization']
+    origin: (origin, callback) => {
+        console.log("Origin: ", origin);
+        if (!origin || ['http://127.0.0.1:5500', 'https://los-santos-elite-bbb4.vercel.app'].indexOf(origin) !== -1) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
 app.options('*', cors()); // Enable preflight for all routes
 
 app.use(cookieParser());
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -142,42 +148,45 @@ const uri = process.env.DATABASE_URI;
 const client = new MongoClient(uri);
 
 const Building_Details = client.db("Feature_Testing").collection("Building Details");
-
 const Usernames_and_Passwords = client.db("Feature_Testing").collection("Usernames and Passwords");
-
 const Car_Details = client.db("Feature_Testing").collection("Car Details");
 
 const transporter = nodemailer.createTransport({
-	host: "smtp.gmail.com",
-	auth: {
-		user: EMAIL_USERNAME,
-		pass: EMAIL_PASSWORD
-	}
+    host: "smtp.gmail.com",
+    auth: {
+        user: EMAIL_USERNAME,
+        pass: EMAIL_PASSWORD
+    }
 });
 
 transporter.verify((error, success) => {
-	if (error) {
-		console.log(error);
-	} else {
-		console.log("Done!!");
-		console.log(success);
-	}
+    if (error) {
+        console.log(error);
+    } else {
+        console.log("Done!!");
+        console.log(success);
+    }
 });
 
 async function main() {
-	try {
-		await client.connect();
-		console.log("Connected successfully to MongoDB");
-	} catch (error) {
-		console.error("Error connecting to MongoDB: ", error);
-	}
+    try {
+        await client.connect();
+        console.log("Connected successfully to MongoDB");
+    } catch (error) {
+        console.error("Error connecting to MongoDB: ", error);
+    }
 }
 
 main().catch(console.error);
 
-app.listen(port, () => {
-	console.log(`Server is running on port ${port}`);
+app.post('/add-new-user', (req, res) => {
+    res.json({ message: 'User added successfully' });
 });
+
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+});
+
 
 async function getPropertyDetails(query) {
 	const result = await Building_Details.find(query).toArray();
