@@ -16,7 +16,7 @@ dotenv.config({ path: path.join(__dirname, "../ENV Files/.env") });
 
 const app = express();
 const port = 3000;
-const SERVER_URL = "https://los-santos-elite-1.onrender.com/";
+const SERVER_URL = ["https://los-santos-elite-bbb4.vercel.app/", "https://los-santos-elite-1.onrender.com/"];
 
 const HOST_URL = process.env.HOST_URL;
 const MERCHANT_ID = process.env.MERCHANT_ID;
