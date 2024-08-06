@@ -2,7 +2,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const newAccount = urlParams.get("new-account");
 const nextPage = urlParams.get("goto");
 
-const SERVER_URL = "https://los-santos-elite-1.onrender.com/";
+const SERVER_URL = "https://los-santos-elite-1.onrender.com";
 
 
 if (newAccount === "true") {
