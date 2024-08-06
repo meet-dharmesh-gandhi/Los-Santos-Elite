@@ -120,13 +120,17 @@ app.use(session({
 	secret: secretKey,
 	resave: false,
 	saveUninitialized: false,
-	cookie: { secure: process.env.NODE_ENV === 'production', sameSite: 'lax' }
+	cookie: { secure: false, sameSite: true }
 }));
 
 app.use(cors({
 	origin: ['http://127.0.0.1:5500', 'https://los-santos-elite-bbb4.vercel.app'],
-	credentials: true
+	credentials: true,
+	methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+	allowedHeaders: ['Content-Type', 'Authorization']
 }));
+
+app.options('*', cors()); // Enable preflight for all routes
 
 app.use(cookieParser());
 
@@ -172,9 +176,8 @@ async function main() {
 main().catch(console.error);
 
 app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
+	console.log(`Server is running on port ${port}`);
 });
-
 
 async function getPropertyDetails(query) {
 	const result = await Building_Details.find(query).toArray();
