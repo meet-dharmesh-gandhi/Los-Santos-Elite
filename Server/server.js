@@ -38,7 +38,7 @@ app.use(session({
 }));
 
 app.use(cors({
-	origin: ["https://los-santos-elite-bbb4.vercel.app/", "https://los-santos-elite-1.onrender.com"],
+	origin: ["https://los-santos-elite-bbb4.vercel.app"],
 	credentials: true
 }));
 
