@@ -1,0 +1,2765 @@
+[{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d49d"
+  },
+  "Type": "XUV",
+  "Name": "Mercedes S-Class",
+  "Number Of Seats": 6,
+  "Price": 285871,
+  "State": "for rent",
+  "Brand": "Lamborghini",
+  "Contact": "567-890-1234",
+  "Engine": {
+    "Horsepower": 698,
+    "Other Factors": "V12"
+  },
+  "Brand Rating": 4.9,
+  "Configuration": "diesel",
+  "Color": [
+    "blue"
+  ],
+  "Mileage": 6.84,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d49e"
+  },
+  "Type": "XUV",
+  "Name": "Mercedes S-Class",
+  "Number Of Seats": 10,
+  "Price": 154002,
+  "State": "for purchase",
+  "Brand": "Tesla",
+  "Contact": "890-123-4567",
+  "Engine": {
+    "Horsepower": 405,
+    "Other Factors": "Electric Motor"
+  },
+  "Brand Rating": 4.8,
+  "Configuration": "diesel",
+  "Color": [
+    "white"
+  ],
+  "Mileage": 10.25,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d49f"
+  },
+  "Type": "Limo",
+  "Name": "Lamborghini Huracan",
+  "Number Of Seats": 3,
+  "Price": 263872,
+  "State": "for both",
+  "Brand": "Tesla",
+  "Contact": "890-123-4567",
+  "Engine": {
+    "Horsepower": 734,
+    "Other Factors": "Hybrid"
+  },
+  "Brand Rating": 4.8,
+  "Configuration": "cng",
+  "Color": [
+    "black"
+  ],
+  "Mileage": 7.14,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4a0"
+  },
+  "Type": "Limo",
+  "Name": "Porsche 911",
+  "Number Of Seats": 5,
+  "Price": 51180,
+  "State": "for both",
+  "Brand": "Lamborghini",
+  "Contact": "567-890-1234",
+  "Engine": {
+    "Horsepower": 712,
+    "Other Factors": "Hybrid"
+  },
+  "Brand Rating": 4.9,
+  "Configuration": "petrol",
+  "Color": [
+    "red"
+  ],
+  "Mileage": 12.63,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4a1"
+  },
+  "Type": "Limo",
+  "Name": "Rolls Royce Phantom",
+  "Number Of Seats": 13,
+  "Price": 93092,
+  "State": "for both",
+  "Brand": "Tesla",
+  "Contact": "890-123-4567",
+  "Engine": {
+    "Horsepower": 493,
+    "Other Factors": "V8"
+  },
+  "Brand Rating": 4.8,
+  "Configuration": "cng",
+  "Color": [
+    "grey",
+    "white"
+  ],
+  "Mileage": 9.23,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4a2"
+  },
+  "Type": "SUV",
+  "Name": "Jaguar F-Type",
+  "Number Of Seats": 9,
+  "Price": 213813,
+  "State": "for both",
+  "Brand": "Lamborghini",
+  "Contact": "567-890-1234",
+  "Engine": {
+    "Horsepower": 447,
+    "Other Factors": "Electric Motor"
+  },
+  "Brand Rating": 4.9,
+  "Configuration": "electric",
+  "Color": [
+    "white",
+    "red",
+    "blue",
+    "grey"
+  ],
+  "Mileage": 12.41,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4a3"
+  },
+  "Type": "Limo",
+  "Name": "Porsche 911",
+  "Number Of Seats": 3,
+  "Price": 74589,
+  "State": "for both",
+  "Brand": "Mercedes",
+  "Contact": "345-678-9012",
+  "Engine": {
+    "Horsepower": 721,
+    "Other Factors": "Electric Motor"
+  },
+  "Brand Rating": 4.8,
+  "Configuration": "petrol",
+  "Color": [
+    "grey",
+    "blue",
+    "white"
+  ],
+  "Mileage": 6.87,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4a4"
+  },
+  "Type": "SUV",
+  "Name": "Lamborghini Huracan",
+  "Number Of Seats": 6,
+  "Price": 24264,
+  "State": "for both",
+  "Brand": "Tesla",
+  "Contact": "890-123-4567",
+  "Engine": {
+    "Horsepower": 307,
+    "Other Factors": "V8"
+  },
+  "Brand Rating": 4.8,
+  "Configuration": "cng",
+  "Color": [
+    "red",
+    "blue"
+  ],
+  "Mileage": 7.67,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4a5"
+  },
+  "Type": "Luxury",
+  "Name": "Jaguar F-Type",
+  "Number Of Seats": 9,
+  "Price": 18822,
+  "State": "for purchase",
+  "Brand": "BMW",
+  "Contact": "234-567-8901",
+  "Engine": {
+    "Horsepower": 201,
+    "Other Factors": "Electric Motor"
+  },
+  "Brand Rating": 4.7,
+  "Configuration": "hybrid",
+  "Color": [
+    "blue",
+    "red",
+    "black"
+  ],
+  "Mileage": 10.49,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4a6"
+  },
+  "Type": "Sports",
+  "Name": "Audi A8",
+  "Number Of Seats": 4,
+  "Price": 292637,
+  "State": "for both",
+  "Brand": "Jaguar",
+  "Contact": "901-234-5678",
+  "Engine": {
+    "Horsepower": 632,
+    "Other Factors": "V12"
+  },
+  "Brand Rating": 4.6,
+  "Configuration": "petrol",
+  "Color": [
+    "red",
+    "black"
+  ],
+  "Mileage": 15.58,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4a7"
+  },
+  "Type": "Limo",
+  "Name": "Lamborghini Huracan",
+  "Number Of Seats": 14,
+  "Price": 98455,
+  "State": "for rent",
+  "Brand": "Audi",
+  "Contact": "456-789-0123",
+  "Engine": {
+    "Horsepower": 773,
+    "Other Factors": "V8"
+  },
+  "Brand Rating": 4.6,
+  "Configuration": "hybrid",
+  "Color": [
+    "black",
+    "red",
+    "grey",
+    "blue"
+  ],
+  "Mileage": 17.24,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4a8"
+  },
+  "Type": "Sports",
+  "Name": "Lamborghini Hurrican",
+  "Number Of Seats": 8,
+  "Price": 296504,
+  "State": "for both",
+  "Brand": "BMW",
+  "Contact": "234-567-8901",
+  "Engine": {
+    "Horsepower": 469,
+    "Other Factors": "Hybrid"
+  },
+  "Brand Rating": 4.7,
+  "Configuration": "electric",
+  "Color": [
+    "blue",
+    "black",
+    "white",
+    "red"
+  ],
+  "Mileage": 15.72,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4a9"
+  },
+  "Type": "Limo",
+  "Name": "Mercedes S-Class",
+  "Number Of Seats": 14,
+  "Price": 166551,
+  "State": "for rent",
+  "Brand": "Porsche",
+  "Contact": "678-901-2345",
+  "Engine": {
+    "Horsepower": 497,
+    "Other Factors": "Electric Motor"
+  },
+  "Brand Rating": 4.7,
+  "Configuration": "petrol",
+  "Color": [
+    "black",
+    "white",
+    "grey",
+    "red"
+  ],
+  "Mileage": 15.56,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4aa"
+  },
+  "Type": "Limo",
+  "Name": "Audi A8",
+  "Number Of Seats": 10,
+  "Price": 253092,
+  "State": "for purchase",
+  "Brand": "Rolls Royce",
+  "Contact": "789-012-3456",
+  "Engine": {
+    "Horsepower": 489,
+    "Other Factors": "Hybrid"
+  },
+  "Brand Rating": 4.9,
+  "Configuration": "cng",
+  "Color": [
+    "red",
+    "blue",
+    "grey",
+    "black"
+  ],
+  "Mileage": 19.49,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4ab"
+  },
+  "Type": "XUV",
+  "Name": "Jaguar F-Type",
+  "Number Of Seats": 3,
+  "Price": 74166,
+  "State": "for both",
+  "Brand": "Ferrari",
+  "Contact": "123-456-7890",
+  "Engine": {
+    "Horsepower": 682,
+    "Other Factors": "Hybrid"
+  },
+  "Brand Rating": 4.9,
+  "Configuration": "electric",
+  "Color": [
+    "grey",
+    "black",
+    "red",
+    "blue"
+  ],
+  "Mileage": 18.93,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4ac"
+  },
+  "Type": "SUV",
+  "Name": "Jaguar F-Type",
+  "Number Of Seats": 10,
+  "Price": 181516,
+  "State": "for purchase",
+  "Brand": "Mercedes",
+  "Contact": "345-678-9012",
+  "Engine": {
+    "Horsepower": 482,
+    "Other Factors": "Electric Motor"
+  },
+  "Brand Rating": 4.8,
+  "Configuration": "petrol",
+  "Color": [
+    "grey",
+    "blue",
+    "white"
+  ],
+  "Mileage": 16.46,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4ad"
+  },
+  "Type": "Limo",
+  "Name": "Audi A8",
+  "Number Of Seats": 9,
+  "Price": 135714,
+  "State": "for both",
+  "Brand": "Tesla",
+  "Contact": "890-123-4567",
+  "Engine": {
+    "Horsepower": 362,
+    "Other Factors": "V8"
+  },
+  "Brand Rating": 4.8,
+  "Configuration": "petrol",
+  "Color": [
+    "blue",
+    "grey"
+  ],
+  "Mileage": 5.58,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4ae"
+  },
+  "Type": "XUV",
+  "Name": "Rolls Royce Phantom",
+  "Number Of Seats": 3,
+  "Price": 69285,
+  "State": "for both",
+  "Brand": "Tesla",
+  "Contact": "890-123-4567",
+  "Engine": {
+    "Horsepower": 656,
+    "Other Factors": "Hybrid"
+  },
+  "Brand Rating": 4.8,
+  "Configuration": "diesel",
+  "Color": [
+    "grey",
+    "black"
+  ],
+  "Mileage": 19.33,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4af"
+  },
+  "Type": "SUV",
+  "Name": "Jaguar F-Type",
+  "Number Of Seats": 2,
+  "Price": 264200,
+  "State": "for rent",
+  "Brand": "Jaguar",
+  "Contact": "901-234-5678",
+  "Engine": {
+    "Horsepower": 763,
+    "Other Factors": "V8"
+  },
+  "Brand Rating": 4.6,
+  "Configuration": "cng",
+  "Color": [
+    "white",
+    "blue",
+    "black",
+    "grey"
+  ],
+  "Mileage": 13.58,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4b0"
+  },
+  "Type": "Sports",
+  "Name": "Lamborghini Huracan",
+  "Number Of Seats": 12,
+  "Price": 224963,
+  "State": "for both",
+  "Brand": "Tesla",
+  "Contact": "890-123-4567",
+  "Engine": {
+    "Horsepower": 599,
+    "Other Factors": "V12"
+  },
+  "Brand Rating": 4.8,
+  "Configuration": "diesel",
+  "Color": [
+    "grey",
+    "white"
+  ],
+  "Mileage": 10.48,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4b1"
+  },
+  "Type": "SUV",
+  "Name": "BMW X5",
+  "Number Of Seats": 14,
+  "Price": 215445,
+  "State": "for both",
+  "Brand": "Tesla",
+  "Contact": "890-123-4567",
+  "Engine": {
+    "Horsepower": 614,
+    "Other Factors": "V12"
+  },
+  "Brand Rating": 4.8,
+  "Configuration": "hybrid",
+  "Color": [
+    "grey",
+    "white"
+  ],
+  "Mileage": 15.51,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4b2"
+  },
+  "Type": "Sports",
+  "Name": "Porsche 911",
+  "Number Of Seats": 8,
+  "Price": 28919,
+  "State": "for purchase",
+  "Brand": "Audi",
+  "Contact": "456-789-0123",
+  "Engine": {
+    "Horsepower": 374,
+    "Other Factors": "V8"
+  },
+  "Brand Rating": 4.6,
+  "Configuration": "hybrid",
+  "Color": [
+    "red",
+    "black",
+    "white",
+    "blue"
+  ],
+  "Mileage": 5.66,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4b3"
+  },
+  "Type": "Limo",
+  "Name": "Lamborghini Huracan",
+  "Number Of Seats": 9,
+  "Price": 197373,
+  "State": "for both",
+  "Brand": "Lamborghini",
+  "Contact": "567-890-1234",
+  "Engine": {
+    "Horsepower": 723,
+    "Other Factors": "Hybrid"
+  },
+  "Brand Rating": 4.9,
+  "Configuration": "cng",
+  "Color": [
+    "red",
+    "black",
+    "blue"
+  ],
+  "Mileage": 7.51,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4b4"
+  },
+  "Type": "SUV",
+  "Name": "Porsche 911",
+  "Number Of Seats": 9,
+  "Price": 292917,
+  "State": "for both",
+  "Brand": "Tesla",
+  "Contact": "890-123-4567",
+  "Engine": {
+    "Horsepower": 301,
+    "Other Factors": "V8"
+  },
+  "Brand Rating": 4.8,
+  "Configuration": "electric",
+  "Color": [
+    "white",
+    "grey",
+    "blue"
+  ],
+  "Mileage": 15.49,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4b5"
+  },
+  "Type": "Sports",
+  "Name": "Jaguar F-Type",
+  "Number Of Seats": 10,
+  "Price": 54364,
+  "State": "for both",
+  "Brand": "Tesla",
+  "Contact": "890-123-4567",
+  "Engine": {
+    "Horsepower": 346,
+    "Other Factors": "Electric Motor"
+  },
+  "Brand Rating": 4.8,
+  "Configuration": "diesel",
+  "Color": [
+    "blue",
+    "red",
+    "grey"
+  ],
+  "Mileage": 12.01,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4b6"
+  },
+  "Type": "Limo",
+  "Name": "Audi A8",
+  "Number Of Seats": 5,
+  "Price": 207197,
+  "State": "for rent",
+  "Brand": "Porsche",
+  "Contact": "678-901-2345",
+  "Engine": {
+    "Horsepower": 527,
+    "Other Factors": "Electric Motor"
+  },
+  "Brand Rating": 4.7,
+  "Configuration": "hybrid",
+  "Color": [
+    "red"
+  ],
+  "Mileage": 9.72,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4b7"
+  },
+  "Type": "SUV",
+  "Name": "Mercedes S-Class",
+  "Number Of Seats": 12,
+  "Price": 121805,
+  "State": "for both",
+  "Brand": "BMW",
+  "Contact": "234-567-8901",
+  "Engine": {
+    "Horsepower": 651,
+    "Other Factors": "Electric Motor"
+  },
+  "Brand Rating": 4.7,
+  "Configuration": "hybrid",
+  "Color": [
+    "black"
+  ],
+  "Mileage": 8.18,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4b8"
+  },
+  "Type": "XUV",
+  "Name": "Lamborghini Huracan",
+  "Number Of Seats": 8,
+  "Price": 126795,
+  "State": "for rent",
+  "Brand": "Lamborghini",
+  "Contact": "567-890-1234",
+  "Engine": {
+    "Horsepower": 256,
+    "Other Factors": "Hybrid"
+  },
+  "Brand Rating": 4.9,
+  "Configuration": "diesel",
+  "Color": [
+    "black",
+    "red",
+    "white",
+    "blue"
+  ],
+  "Mileage": 5.7,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4b9"
+  },
+  "Type": "Luxury",
+  "Name": "Tesla Model S",
+  "Number Of Seats": 8,
+  "Price": 223766,
+  "State": "for rent",
+  "Brand": "Jaguar",
+  "Contact": "901-234-5678",
+  "Engine": {
+    "Horsepower": 602,
+    "Other Factors": "Hybrid"
+  },
+  "Brand Rating": 4.6,
+  "Configuration": "electric",
+  "Color": [
+    "grey",
+    "white",
+    "black"
+  ],
+  "Mileage": 11.74,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4ba"
+  },
+  "Type": "Limo",
+  "Name": "Lamborghini Huracan",
+  "Number Of Seats": 8,
+  "Price": 172903,
+  "State": "for rent",
+  "Brand": "BMW",
+  "Contact": "234-567-8901",
+  "Engine": {
+    "Horsepower": 245,
+    "Other Factors": "Electric Motor"
+  },
+  "Brand Rating": 4.7,
+  "Configuration": "electric",
+  "Color": [
+    "white",
+    "grey"
+  ],
+  "Mileage": 13.81,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4bb"
+  },
+  "Type": "Limo",
+  "Name": "Ferrari Roma",
+  "Number Of Seats": 10,
+  "Price": 214906,
+  "State": "for purchase",
+  "Brand": "Audi",
+  "Contact": "456-789-0123",
+  "Engine": {
+    "Horsepower": 484,
+    "Other Factors": "V12"
+  },
+  "Brand Rating": 4.6,
+  "Configuration": "electric",
+  "Color": [
+    "white",
+    "grey"
+  ],
+  "Mileage": 9.84,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4bc"
+  },
+  "Type": "SUV",
+  "Name": "Ferrari Roma",
+  "Number Of Seats": 7,
+  "Price": 258418,
+  "State": "for both",
+  "Brand": "Mercedes",
+  "Contact": "345-678-9012",
+  "Engine": {
+    "Horsepower": 791,
+    "Other Factors": "V12"
+  },
+  "Brand Rating": 4.8,
+  "Configuration": "petrol",
+  "Color": [
+    "blue",
+    "grey",
+    "black",
+    "red"
+  ],
+  "Mileage": 18.54,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4bd"
+  },
+  "Type": "Sports",
+  "Name": "Rolls Royce Phantom",
+  "Number Of Seats": 6,
+  "Price": 73769,
+  "State": "for rent",
+  "Brand": "Audi",
+  "Contact": "456-789-0123",
+  "Engine": {
+    "Horsepower": 605,
+    "Other Factors": "Hybrid"
+  },
+  "Brand Rating": 4.6,
+  "Configuration": "diesel",
+  "Color": [
+    "black",
+    "white",
+    "red",
+    "blue"
+  ],
+  "Mileage": 14.87,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4be"
+  },
+  "Type": "XUV",
+  "Name": "Ferrari Roma",
+  "Number Of Seats": 10,
+  "Price": 280990,
+  "State": "for purchase",
+  "Brand": "Rolls Royce",
+  "Contact": "789-012-3456",
+  "Engine": {
+    "Horsepower": 789,
+    "Other Factors": "V12"
+  },
+  "Brand Rating": 4.9,
+  "Configuration": "cng",
+  "Color": [
+    "grey",
+    "red",
+    "blue"
+  ],
+  "Mileage": 7.44,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4bf"
+  },
+  "Type": "XUV",
+  "Name": "Porsche 911",
+  "Number Of Seats": 2,
+  "Price": 85105,
+  "State": "for both",
+  "Brand": "Rolls Royce",
+  "Contact": "789-012-3456",
+  "Engine": {
+    "Horsepower": 541,
+    "Other Factors": "V12"
+  },
+  "Brand Rating": 4.9,
+  "Configuration": "cng",
+  "Color": [
+    "white",
+    "blue",
+    "grey"
+  ],
+  "Mileage": 8.95,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4c0"
+  },
+  "Type": "Luxury",
+  "Name": "Porsche 911",
+  "Number Of Seats": 3,
+  "Price": 164024,
+  "State": "for both",
+  "Brand": "Ferrari",
+  "Contact": "123-456-7890",
+  "Engine": {
+    "Horsepower": 516,
+    "Other Factors": "V12"
+  },
+  "Brand Rating": 4.9,
+  "Configuration": "diesel",
+  "Color": [
+    "blue"
+  ],
+  "Mileage": 18.43,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4c1"
+  },
+  "Type": "Limo",
+  "Name": "Ferrari Roma",
+  "Number Of Seats": 7,
+  "Price": 262054,
+  "State": "for both",
+  "Brand": "Lamborghini",
+  "Contact": "567-890-1234",
+  "Engine": {
+    "Horsepower": 288,
+    "Other Factors": "Electric Motor"
+  },
+  "Brand Rating": 4.9,
+  "Configuration": "diesel",
+  "Color": [
+    "blue",
+    "grey",
+    "red",
+    "white"
+  ],
+  "Mileage": 10.8,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4c2"
+  },
+  "Type": "Luxury",
+  "Name": "Tesla Model S",
+  "Number Of Seats": 11,
+  "Price": 73181,
+  "State": "for purchase",
+  "Brand": "Jaguar",
+  "Contact": "901-234-5678",
+  "Engine": {
+    "Horsepower": 674,
+    "Other Factors": "Electric Motor"
+  },
+  "Brand Rating": 4.6,
+  "Configuration": "petrol",
+  "Color": [
+    "white",
+    "red",
+    "blue",
+    "black"
+  ],
+  "Mileage": 16.98,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4c3"
+  },
+  "Type": "SUV",
+  "Name": "Lamborghini Huracan",
+  "Number Of Seats": 10,
+  "Price": 263823,
+  "State": "for both",
+  "Brand": "Jaguar",
+  "Contact": "901-234-5678",
+  "Engine": {
+    "Horsepower": 390,
+    "Other Factors": "Hybrid"
+  },
+  "Brand Rating": 4.6,
+  "Configuration": "cng",
+  "Color": [
+    "red",
+    "blue",
+    "white",
+    "black"
+  ],
+  "Mileage": 15.31,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4c4"
+  },
+  "Type": "Limo",
+  "Name": "Rolls Royce Phantom",
+  "Number Of Seats": 2,
+  "Price": 225065,
+  "State": "for purchase",
+  "Brand": "BMW",
+  "Contact": "234-567-8901",
+  "Engine": {
+    "Horsepower": 478,
+    "Other Factors": "Electric Motor"
+  },
+  "Brand Rating": 4.7,
+  "Configuration": "cng",
+  "Color": [
+    "grey",
+    "black",
+    "white",
+    "red"
+  ],
+  "Mileage": 7.47,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4c5"
+  },
+  "Type": "Sports",
+  "Name": "Mercedes S-Class",
+  "Number Of Seats": 5,
+  "Price": 116083,
+  "State": "for rent",
+  "Brand": "Porsche",
+  "Contact": "678-901-2345",
+  "Engine": {
+    "Horsepower": 731,
+    "Other Factors": "Electric Motor"
+  },
+  "Brand Rating": 4.7,
+  "Configuration": "petrol",
+  "Color": [
+    "black",
+    "white",
+    "blue"
+  ],
+  "Mileage": 12.15,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4c6"
+  },
+  "Type": "Limo",
+  "Name": "Lamborghini Huracan",
+  "Number Of Seats": 4,
+  "Price": 22366,
+  "State": "for purchase",
+  "Brand": "Jaguar",
+  "Contact": "901-234-5678",
+  "Engine": {
+    "Horsepower": 799,
+    "Other Factors": "Electric Motor"
+  },
+  "Brand Rating": 4.6,
+  "Configuration": "hybrid",
+  "Color": [
+    "white",
+    "red"
+  ],
+  "Mileage": 15.94,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4c7"
+  },
+  "Type": "Limo",
+  "Name": "Rolls Royce Phantom",
+  "Number Of Seats": 3,
+  "Price": 170631,
+  "State": "for purchase",
+  "Brand": "BMW",
+  "Contact": "234-567-8901",
+  "Engine": {
+    "Horsepower": 403,
+    "Other Factors": "V12"
+  },
+  "Brand Rating": 4.7,
+  "Configuration": "hybrid",
+  "Color": [
+    "grey",
+    "blue",
+    "white"
+  ],
+  "Mileage": 11.3,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4c8"
+  },
+  "Type": "Limo",
+  "Name": "Jaguar F-Type",
+  "Number Of Seats": 3,
+  "Price": 134934,
+  "State": "for purchase",
+  "Brand": "Tesla",
+  "Contact": "890-123-4567",
+  "Engine": {
+    "Horsepower": 414,
+    "Other Factors": "V8"
+  },
+  "Brand Rating": 4.8,
+  "Configuration": "cng",
+  "Color": [
+    "blue",
+    "grey",
+    "red",
+    "white"
+  ],
+  "Mileage": 18.5,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4c9"
+  },
+  "Type": "Limo",
+  "Name": "Mercedes S-Class",
+  "Number Of Seats": 13,
+  "Price": 200482,
+  "State": "for rent",
+  "Brand": "Jaguar",
+  "Contact": "901-234-5678",
+  "Engine": {
+    "Horsepower": 604,
+    "Other Factors": "V12"
+  },
+  "Brand Rating": 4.6,
+  "Configuration": "cng",
+  "Color": [
+    "white",
+    "red",
+    "blue",
+    "black"
+  ],
+  "Mileage": 9.05,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4ca"
+  },
+  "Type": "SUV",
+  "Name": "Jaguar F-Type",
+  "Number Of Seats": 11,
+  "Price": 289323,
+  "State": "for both",
+  "Brand": "Lamborghini",
+  "Contact": "567-890-1234",
+  "Engine": {
+    "Horsepower": 499,
+    "Other Factors": "Hybrid"
+  },
+  "Brand Rating": 4.9,
+  "Configuration": "petrol",
+  "Color": [
+    "black",
+    "grey",
+    "red",
+    "blue"
+  ],
+  "Mileage": 5.06,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4cb"
+  },
+  "Type": "Limo",
+  "Name": "Jaguar F-Type",
+  "Number Of Seats": 2,
+  "Price": 216993,
+  "State": "for both",
+  "Brand": "Tesla",
+  "Contact": "890-123-4567",
+  "Engine": {
+    "Horsepower": 748,
+    "Other Factors": "Electric Motor"
+  },
+  "Brand Rating": 4.8,
+  "Configuration": "electric",
+  "Color": [
+    "blue",
+    "black"
+  ],
+  "Mileage": 13.87,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4cc"
+  },
+  "Type": "Luxury",
+  "Name": "Lamborghini Huracan",
+  "Number Of Seats": 6,
+  "Price": 80149,
+  "State": "for purchase",
+  "Brand": "Tesla",
+  "Contact": "890-123-4567",
+  "Engine": {
+    "Horsepower": 667,
+    "Other Factors": "Hybrid"
+  },
+  "Brand Rating": 4.8,
+  "Configuration": "petrol",
+  "Color": [
+    "black",
+    "white"
+  ],
+  "Mileage": 19.54,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4cd"
+  },
+  "Type": "Luxury",
+  "Name": "Porsche 911",
+  "Number Of Seats": 14,
+  "Price": 77736,
+  "State": "for rent",
+  "Brand": "Mercedes",
+  "Contact": "345-678-9012",
+  "Engine": {
+    "Horsepower": 514,
+    "Other Factors": "Hybrid"
+  },
+  "Brand Rating": 4.8,
+  "Configuration": "diesel",
+  "Color": [
+    "grey",
+    "white",
+    "blue",
+    "red"
+  ],
+  "Mileage": 8.86,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4ce"
+  },
+  "Type": "XUV",
+  "Name": "Rolls Royce Phantom",
+  "Number Of Seats": 8,
+  "Price": 216987,
+  "State": "for both",
+  "Brand": "Jaguar",
+  "Contact": "901-234-5678",
+  "Engine": {
+    "Horsepower": 545,
+    "Other Factors": "Electric Motor"
+  },
+  "Brand Rating": 4.6,
+  "Configuration": "electric",
+  "Color": [
+    "red",
+    "blue",
+    "white"
+  ],
+  "Mileage": 10.53,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4cf"
+  },
+  "Type": "Sports",
+  "Name": "BMW X5",
+  "Number Of Seats": 14,
+  "Price": 225840,
+  "State": "for rent",
+  "Brand": "Tesla",
+  "Contact": "890-123-4567",
+  "Engine": {
+    "Horsepower": 343,
+    "Other Factors": "V12"
+  },
+  "Brand Rating": 4.8,
+  "Configuration": "cng",
+  "Color": [
+    "red",
+    "white",
+    "black"
+  ],
+  "Mileage": 7.6,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4d0"
+  },
+  "Type": "XUV",
+  "Name": "Audi A8",
+  "Number Of Seats": 5,
+  "Price": 167072,
+  "State": "for rent",
+  "Brand": "BMW",
+  "Contact": "234-567-8901",
+  "Engine": {
+    "Horsepower": 311,
+    "Other Factors": "V12"
+  },
+  "Brand Rating": 4.7,
+  "Configuration": "cng",
+  "Color": [
+    "black",
+    "white"
+  ],
+  "Mileage": 15.25,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4d1"
+  },
+  "Type": "Luxury",
+  "Name": "Ferrari Roma",
+  "Number Of Seats": 9,
+  "Price": 279659,
+  "State": "for rent",
+  "Brand": "Mercedes",
+  "Contact": "345-678-9012",
+  "Engine": {
+    "Horsepower": 567,
+    "Other Factors": "Electric Motor"
+  },
+  "Brand Rating": 4.8,
+  "Configuration": "electric",
+  "Color": [
+    "red",
+    "black",
+    "grey"
+  ],
+  "Mileage": 7.76,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4d2"
+  },
+  "Type": "Sports",
+  "Name": "Mercedes S-Class",
+  "Number Of Seats": 13,
+  "Price": 63585,
+  "State": "for rent",
+  "Brand": "Audi",
+  "Contact": "456-789-0123",
+  "Engine": {
+    "Horsepower": 292,
+    "Other Factors": "Hybrid"
+  },
+  "Brand Rating": 4.6,
+  "Configuration": "hybrid",
+  "Color": [
+    "red",
+    "blue"
+  ],
+  "Mileage": 10.17,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4d3"
+  },
+  "Type": "XUV",
+  "Name": "Rolls Royce Phantom",
+  "Number Of Seats": 13,
+  "Price": 125287,
+  "State": "for both",
+  "Brand": "Rolls Royce",
+  "Contact": "789-012-3456",
+  "Engine": {
+    "Horsepower": 707,
+    "Other Factors": "V8"
+  },
+  "Brand Rating": 4.9,
+  "Configuration": "hybrid",
+  "Color": [
+    "black",
+    "red",
+    "grey"
+  ],
+  "Mileage": 18.55,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4d4"
+  },
+  "Type": "SUV",
+  "Name": "Porsche 911",
+  "Number Of Seats": 2,
+  "Price": 261778,
+  "State": "for purchase",
+  "Brand": "Tesla",
+  "Contact": "890-123-4567",
+  "Engine": {
+    "Horsepower": 587,
+    "Other Factors": "V12"
+  },
+  "Brand Rating": 4.8,
+  "Configuration": "cng",
+  "Color": [
+    "blue",
+    "red"
+  ],
+  "Mileage": 6.68,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4d5"
+  },
+  "Type": "XUV",
+  "Name": "Lamborghini Huracan",
+  "Number Of Seats": 13,
+  "Price": 284298,
+  "State": "for rent",
+  "Brand": "BMW",
+  "Contact": "234-567-8901",
+  "Engine": {
+    "Horsepower": 527,
+    "Other Factors": "V8"
+  },
+  "Brand Rating": 4.7,
+  "Configuration": "cng",
+  "Color": [
+    "white",
+    "black",
+    "red",
+    "blue"
+  ],
+  "Mileage": 14.16,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4d6"
+  },
+  "Type": "Sports",
+  "Name": "Porsche 911",
+  "Number Of Seats": 11,
+  "Price": 204193,
+  "State": "for purchase",
+  "Brand": "Ferrari",
+  "Contact": "123-456-7890",
+  "Engine": {
+    "Horsepower": 420,
+    "Other Factors": "V12"
+  },
+  "Brand Rating": 4.9,
+  "Configuration": "diesel",
+  "Color": [
+    "white",
+    "blue",
+    "grey"
+  ],
+  "Mileage": 5.3,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4d7"
+  },
+  "Type": "Luxury",
+  "Name": "Lamborghini Huracan",
+  "Number Of Seats": 3,
+  "Price": 132513,
+  "State": "for purchase",
+  "Brand": "Porsche",
+  "Contact": "678-901-2345",
+  "Engine": {
+    "Horsepower": 396,
+    "Other Factors": "V8"
+  },
+  "Brand Rating": 4.7,
+  "Configuration": "electric",
+  "Color": [
+    "blue",
+    "red"
+  ],
+  "Mileage": 12.16,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4d8"
+  },
+  "Type": "SUV",
+  "Name": "Ferrari Roma",
+  "Number Of Seats": 11,
+  "Price": 247665,
+  "State": "for both",
+  "Brand": "Jaguar",
+  "Contact": "901-234-5678",
+  "Engine": {
+    "Horsepower": 639,
+    "Other Factors": "Hybrid"
+  },
+  "Brand Rating": 4.6,
+  "Configuration": "petrol",
+  "Color": [
+    "white",
+    "black"
+  ],
+  "Mileage": 19.46,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4d9"
+  },
+  "Type": "XUV",
+  "Name": "Porsche 911",
+  "Number Of Seats": 13,
+  "Price": 12327,
+  "State": "for both",
+  "Brand": "Jaguar",
+  "Contact": "901-234-5678",
+  "Engine": {
+    "Horsepower": 544,
+    "Other Factors": "V8"
+  },
+  "Brand Rating": 4.6,
+  "Configuration": "petrol",
+  "Color": [
+    "red"
+  ],
+  "Mileage": 16.89,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4da"
+  },
+  "Type": "Limo",
+  "Name": "Jaguar F-Type",
+  "Number Of Seats": 4,
+  "Price": 74151,
+  "State": "for rent",
+  "Brand": "Mercedes",
+  "Contact": "345-678-9012",
+  "Engine": {
+    "Horsepower": 652,
+    "Other Factors": "V8"
+  },
+  "Brand Rating": 4.8,
+  "Configuration": "hybrid",
+  "Color": [
+    "white",
+    "black",
+    "red",
+    "grey"
+  ],
+  "Mileage": 6.03,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4db"
+  },
+  "Type": "Luxury",
+  "Name": "Ferrari Roma",
+  "Number Of Seats": 2,
+  "Price": 104400,
+  "State": "for rent",
+  "Brand": "Ferrari",
+  "Contact": "123-456-7890",
+  "Engine": {
+    "Horsepower": 791,
+    "Other Factors": "V12"
+  },
+  "Brand Rating": 4.9,
+  "Configuration": "petrol",
+  "Color": [
+    "red",
+    "white",
+    "black",
+    "grey"
+  ],
+  "Mileage": 18.71,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4dc"
+  },
+  "Type": "Sports",
+  "Name": "Jaguar F-Type",
+  "Number Of Seats": 9,
+  "Price": 76069,
+  "State": "for purchase",
+  "Brand": "Lamborghini",
+  "Contact": "567-890-1234",
+  "Engine": {
+    "Horsepower": 406,
+    "Other Factors": "Hybrid"
+  },
+  "Brand Rating": 4.9,
+  "Configuration": "electric",
+  "Color": [
+    "black",
+    "white",
+    "blue"
+  ],
+  "Mileage": 7.61,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4dd"
+  },
+  "Type": "Limo",
+  "Name": "BMW X5",
+  "Number Of Seats": 2,
+  "Price": 146458,
+  "State": "for both",
+  "Brand": "Porsche",
+  "Contact": "678-901-2345",
+  "Engine": {
+    "Horsepower": 488,
+    "Other Factors": "Hybrid"
+  },
+  "Brand Rating": 4.7,
+  "Configuration": "cng",
+  "Color": [
+    "blue",
+    "black"
+  ],
+  "Mileage": 7.05,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4de"
+  },
+  "Type": "SUV",
+  "Name": "Ferrari Roma",
+  "Number Of Seats": 10,
+  "Price": 200831,
+  "State": "for purchase",
+  "Brand": "Mercedes",
+  "Contact": "345-678-9012",
+  "Engine": {
+    "Horsepower": 576,
+    "Other Factors": "Hybrid"
+  },
+  "Brand Rating": 4.8,
+  "Configuration": "cng",
+  "Color": [
+    "black",
+    "blue"
+  ],
+  "Mileage": 16.99,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4df"
+  },
+  "Type": "Limo",
+  "Name": "Tesla Model S",
+  "Number Of Seats": 7,
+  "Price": 20126,
+  "State": "for rent",
+  "Brand": "Audi",
+  "Contact": "456-789-0123",
+  "Engine": {
+    "Horsepower": 510,
+    "Other Factors": "Hybrid"
+  },
+  "Brand Rating": 4.6,
+  "Configuration": "cng",
+  "Color": [
+    "white",
+    "blue",
+    "black",
+    "red"
+  ],
+  "Mileage": 11.88,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4e0"
+  },
+  "Type": "XUV",
+  "Name": "Lamborghini Huracan",
+  "Number Of Seats": 6,
+  "Price": 173676,
+  "State": "for both",
+  "Brand": "Mercedes",
+  "Contact": "345-678-9012",
+  "Engine": {
+    "Horsepower": 390,
+    "Other Factors": "V12"
+  },
+  "Brand Rating": 4.8,
+  "Configuration": "cng",
+  "Color": [
+    "blue"
+  ],
+  "Mileage": 16.21,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4e1"
+  },
+  "Type": "SUV",
+  "Name": "Audi A8",
+  "Number Of Seats": 8,
+  "Price": 213562,
+  "State": "for purchase",
+  "Brand": "Rolls Royce",
+  "Contact": "789-012-3456",
+  "Engine": {
+    "Horsepower": 764,
+    "Other Factors": "V8"
+  },
+  "Brand Rating": 4.9,
+  "Configuration": "cng",
+  "Color": [
+    "blue",
+    "white",
+    "grey",
+    "red"
+  ],
+  "Mileage": 12.31,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4e2"
+  },
+  "Type": "Limo",
+  "Name": "Lamborghini Huracan",
+  "Number Of Seats": 9,
+  "Price": 289210,
+  "State": "for purchase",
+  "Brand": "Porsche",
+  "Contact": "678-901-2345",
+  "Engine": {
+    "Horsepower": 325,
+    "Other Factors": "Hybrid"
+  },
+  "Brand Rating": 4.7,
+  "Configuration": "cng",
+  "Color": [
+    "white",
+    "grey",
+    "blue"
+  ],
+  "Mileage": 13.58,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4e3"
+  },
+  "Type": "Luxury",
+  "Name": "Lamborghini Huracan",
+  "Number Of Seats": 4,
+  "Price": 24731,
+  "State": "for rent",
+  "Brand": "Ferrari",
+  "Contact": "123-456-7890",
+  "Engine": {
+    "Horsepower": 556,
+    "Other Factors": "Hybrid"
+  },
+  "Brand Rating": 4.9,
+  "Configuration": "petrol",
+  "Color": [
+    "white",
+    "grey",
+    "blue"
+  ],
+  "Mileage": 10.55,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4e4"
+  },
+  "Type": "XUV",
+  "Name": "Ferrari Roma",
+  "Number Of Seats": 5,
+  "Price": 175080,
+  "State": "for purchase",
+  "Brand": "Audi",
+  "Contact": "456-789-0123",
+  "Engine": {
+    "Horsepower": 792,
+    "Other Factors": "Hybrid"
+  },
+  "Brand Rating": 4.6,
+  "Configuration": "diesel",
+  "Color": [
+    "red",
+    "grey",
+    "white"
+  ],
+  "Mileage": 17.85,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4e5"
+  },
+  "Type": "Sports",
+  "Name": "Jaguar F-Type",
+  "Number Of Seats": 8,
+  "Price": 57658,
+  "State": "for purchase",
+  "Brand": "Rolls Royce",
+  "Contact": "789-012-3456",
+  "Engine": {
+    "Horsepower": 780,
+    "Other Factors": "V12"
+  },
+  "Brand Rating": 4.9,
+  "Configuration": "diesel",
+  "Color": [
+    "black",
+    "white",
+    "grey",
+    "blue"
+  ],
+  "Mileage": 6.65,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4e6"
+  },
+  "Type": "Luxury",
+  "Name": "Lamborghini Huracan",
+  "Number Of Seats": 6,
+  "Price": 56422,
+  "State": "for purchase",
+  "Brand": "Mercedes",
+  "Contact": "345-678-9012",
+  "Engine": {
+    "Horsepower": 212,
+    "Other Factors": "Electric Motor"
+  },
+  "Brand Rating": 4.8,
+  "Configuration": "electric",
+  "Color": [
+    "grey",
+    "black",
+    "red",
+    "blue"
+  ],
+  "Mileage": 11.14,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ab2a6d588891756e30d4e7"
+  },
+  "Type": "XUV",
+  "Name": "Lamborghini Huracan",
+  "Number Of Seats": 10,
+  "Price": 163866,
+  "State": "for purchase",
+  "Brand": "Jaguar",
+  "Contact": "901-234-5678",
+  "Engine": {
+    "Horsepower": 315,
+    "Other Factors": "V12"
+  },
+  "Brand Rating": 4.6,
+  "Configuration": "electric",
+  "Color": [
+    "red",
+    "blue",
+    "grey",
+    "white"
+  ],
+  "Mileage": 19.66,
+  "Descriptions": {
+    "Exterior Description": "Sleek and stylish, the exterior design is both eye-catching and aerodynamic.",
+    "Interior Description": "The interior is crafted with premium materials, offering both comfort and style.",
+    "Internal Description": "Powered by a robust engine, this car delivers exceptional performance and efficiency.",
+    "Luxury Description": "This car offers unparalleled luxury and comfort, making every drive an experience."
+  },
+  "Images": [
+    "URL1",
+    "URL2",
+    "URL3",
+    "URL4",
+    "URL5"
+  ]
+}]

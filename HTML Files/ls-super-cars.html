@@ -21,6 +21,7 @@
 </head>
 
 <body>
+	<span id="loader"></span>
 	<div class="box2" id="box2">
 		<h4>Your Profile</h4>
 		<hr />
@@ -28,21 +29,21 @@
 	</div>
 	<div class="bg-image bg-image1" id="home-tab"></div>
 	<div class="bg-image bg-image2">
-		<h1>Super Cars</h1>
+		<h1>Mansions</h1>
 	</div>
 	<div class="bg-image bg-image3">
-		<h1>Hyper Cars & more ....</h1>
+		<h1>Penthouses & more ....</h1>
 	</div>
 	<div class="header">
 		<h2>The perfect place to find</h2>
-		<h1>LUXURIOUS CARS</h1>
+		<h1>LUXURIOUS PROPERTIES</h1>
 	</div>
 	<div class="logo">
-		<p>LS SUPER CARS</p>
+		<p>LS REAL ESTATE</p>
 	</div>
 	<nav class="navbar navbar-expand-lg navbar-light">
 		<div class="container">
-			<a class="navbar-brand" href="#">LS Super Cars</a>
+			<a class="navbar-brand" href="#">LS Real Estate</a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
 				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -50,7 +51,7 @@
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav ms-auto">
 					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="../HTML Files/landing-page.html">Home</a>
+						<a class="nav-link active" aria-current="page" href="../HTML Files/main-page.html">Home</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link active" aria-current="page" href="#">Contact Us</a>
@@ -59,7 +60,7 @@
 						<a class="nav-link active" aria-current="page" href="#">Help</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link active" aria-current="page"><i
+						<a class="nav-link active" aria-current="page" href="../HTML Files/show-cart-page.html"><i
 								class="fa-solid fa-cart-shopping cart"></i></a>
 					</li>
 					<li class="nav-item">
@@ -67,10 +68,13 @@
 							<img id="userProfilePicture" src="" alt="" class="dropdown-toggle" id="dropdownMenuButton1"
 								data-bs-toggle="dropdown" aria-expanded="false">
 							<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-								<li><a class="dropdown-item" href="">Your Profile</a></li>
-								<li><a class="dropdown-item" href="">Your Buyings</a></li>
-								<li><a class="dropdown-item" href="">Liked Properties</a></li>
-								<li><a class="dropdown-item sign-out" href="">Sign Out</a></li>
+								<li><a class="dropdown-item" href="../HTML Files/profile-page.html">Your Profile</a>
+								</li>
+								<li><a class="dropdown-item" href="../HTML Files/profile-page.html">Your Buyings</a>
+								</li>
+								<li><a class="dropdown-item" href="../HTML Files/profile-page.html">Liked Properties</a>
+								</li>
+								<li><a class="dropdown-item sign-out">Sign Out</a></li>
 							</ul>
 						</div>
 					</li>
@@ -80,14 +84,14 @@
 	</nav>
 	<section class="search-area">
 		<div class="container container1">
-			<div class="row">
-				<div class="content3 col-lg-12">
+			<div class="row row1">
+				<div class="content3 col-12 col-md-12 col-lg-12">
 					<h1 class="name">
 						Hello, <span id="user-name"></span>
 						<span class="exclamatory">!</span>
 					</h1>
 					<p>
-						Discover your dream <span class="text1">car</span> in the
+						Discover your dream <span class="text1">property</span> in the
 						world of GTA !
 					</p>
 					<div class="search-bar" id="search-bar">
@@ -98,13 +102,44 @@
 							placeholder="Search your dream property" />
 					</div>
 				</div>
+				<hr class="line">
+				<div class="topAreas">
+					<div class="container">
+						<div class="row">
+							<div class="circle-content col-6 col-md-6 col-lg-3">
+								<div class="circle" id="id0">
+									<img src="../Other Media/images/rockfordhills2.webp" alt="" />
+								</div>
+								<h1 class="names" id="id0">Rockford Hills</h1>
+							</div>
+							<div class="circle-content col-6 col-md-6 col-lg-3">
+								<div class="circle" id="id1">
+									<img src="../Other Media/images/rockfordhills2.webp" alt="" />
+								</div>
+								<h1 class="names" id="id1">Vinewood Hills</h1>
+							</div>
+							<div class="circle-content col-6 col-md-6 col-lg-3">
+								<div class="circle" id="id2">
+									<img src="../Other Media/images/rockfordhills2.webp" alt="" />
+								</div>
+								<h1 class="names" id="id2">Del Perro</h1>
+							</div>
+							<div class="circle-content col-6 col-md-6 col-lg-3">
+								<div class="circle" id="id3">
+									<img src="../Other Media/images/rockfordhills2.webp" alt="" />
+								</div>
+								<h1 class="names" id="id3">Mirror Park</h1>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
 	<section class="specialDeals" id="deal-tab">
 		<div class="top">
 			<h1>Deals of the Month</h1>
-			<p>Find your dream car with us.</p>
+			<p>Find your dream properties with us.</p>
 		</div>
 		<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
 			<div class="carousel-indicators">
@@ -148,37 +183,6 @@
 			</div>
 		</div>
 	</section>
-	<section class="areas">
-		<div class="container">
-			<div class="row row1">
-				<h1 class="localities">Brands to look for !</h1>
-				<div class="circle-content col-lg-3">
-					<div class="circle" id="id0">
-						<img src="../Other Media/images/rockfordhills2.webp" alt="" />
-					</div>
-					<h1 class="names" id="id0">Rockford Hills</h1>
-				</div>
-				<div class="circle-content col-lg-3">
-					<div class="circle" id="id1">
-						<img src="../Other Media/images/rockfordhills2.webp" alt="" />
-					</div>
-					<h1 class="names" id="id1">Vinewood Hills</h1>
-				</div>
-				<div class="circle-content col-lg-3">
-					<div class="circle" id="id2">
-						<img src="../Other Media/images/rockfordhills2.webp" alt="" />
-					</div>
-					<h1 class="names" id="id2">Del Perro</h1>
-				</div>
-				<div class="circle-content col-lg-3">
-					<div class="circle" id="id3">
-						<img src="../Other Media/images/rockfordhills2.webp" alt="" />
-					</div>
-					<h1 class="names" id="id3">Mirror Park</h1>
-				</div>
-			</div>
-		</div>
-	</section>
 	<section class="cars-container">
 		<h1 class="heading2 animate__animated animate__fadeIn">Cars</h1>
 		<div class="container">
@@ -190,16 +194,8 @@
 								aria-selected="true">All</button>
 						</li>
 						<li class="nav-item">
-							<button class="nav-link" id="limo-tab" data-bs-toggle="tab"
-								aria-selected="false">Limo</button>
-						</li>
-						<li class="nav-item">
 							<button class="nav-link" id="suv-tab" data-bs-toggle="tab"
 								aria-selected="false">SUV</button>
-						</li>
-						<li class="nav-item">
-							<button class="nav-link" id="xuv-tab" data-bs-toggle="tab"
-								aria-selected="false">XUV</button>
 						</li>
 						<li class="nav-item">
 							<button class="nav-link" id="luxury-tab" data-bs-toggle="tab"
@@ -232,132 +228,140 @@
 						<div class="twoFilters">
 							<fieldset style="border: 2px solid rgb(195, 215, 237)">
 								<legend>Enter your Price</legend>
-								<span class="minPrice">Min Price : </span>
-								<blockquote contenteditable="true" class="minPriceEdit">
-									<span class="minPriceInput">$240,000</span>
-								</blockquote>
-								<span class="maxPrice">Max Price : </span>
-								<blockquote contenteditable="true" class="maxPriceEdit">
-									<span class="maxPriceInput">$12M</span>
-								</blockquote>
+								<div class="price1">
+									<span class="minPrice">Min Price : </span>
+									<blockquote contenteditable="true" class="minPriceEdit">
+										<span class="minPriceInput">$0</span>
+									</blockquote>
+								</div>
+								<div class="price2">
+									<span class="maxPrice">Max Price : </span>
+									<blockquote contenteditable="true" class="maxPriceEdit">
+										<span class="maxPriceInput">$100M</span>
+									</blockquote>
+								</div>
 							</fieldset>
 							<fieldset style="border: 2px solid rgb(195, 215, 237)">
-								<legend>Enter your required Area</legend>
-								<span class="minArea">Min Area : </span>
-								<blockquote contenteditable="true" class="minAreaEdit">
-									<span class="minAreaInput">400 sq ft</span>
+								<legend>Enter Number of Seats</legend>
+								<div class="price1">
+									<span class="minArea">Min Number of Seats : </span>
+									<blockquote contenteditable="true" class="minAreaEdit">
+										<span class="minNumberOfSeatsInput">0</span>
+									</blockquote>
+									<br>
+									<span class="maxArea">Max Number of Seats : </span>
+									<blockquote contenteditable="true" class="maxAreaEdit">
+										<span class="maxNumberOfSeatsInput">15</span>
+									</blockquote>
+							</fieldset>
+							<fieldset>
+								<legend>Enter your required Rating</legend>
+								<span class="minRating">Min Rating : </span>
+								<blockquote contenteditable="true" class="minRatingEdit">
+									<span class="minRatingInput">1 Star(s)</span>
 								</blockquote>
-								<span class="maxArea">Max Area : </span>
-								<blockquote contenteditable="true" class="maxAreaEdit">
-									<span class="maxAreaInput">4000 sq ft</span>
+								<br>
+								<span class="maxRating">Max Rating : </span>
+								<blockquote contenteditable="true" class="maxRatingEdit">
+									<span class="maxRatingInput">5 Star(s)</span>
+								</blockquote>
+							</fieldset>
+							<fieldset>
+								<legend>Enter your required Mileage</legend>
+								<span class="minRating">Min Mileage : </span>
+								<blockquote contenteditable="true" class="minRatingEdit">
+									<span class="minMileageInput">1 kmpl</span>
+								</blockquote>
+								<br>
+								<span class="maxRating">Max Mileage : </span>
+								<blockquote contenteditable="true" class="maxRatingEdit">
+									<span class="maxMileageInput">5 kmpl</span>
 								</blockquote>
 							</fieldset>
 						</div>
-						<div class="otherFilters">
-							<div class="dropdown">
-								<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2"
-									data-bs-toggle="dropdown" aria-expanded="false">Builder</button>
-								<ul class="dropdown-menu dropdown-menu-dark builder"
-									aria-labelledby="dropdownMenuButton2">
-									<p class="dropdown-item">Elite Builders</p>
-									<p class="dropdown-item">Vinewood Estates</p>
-									<p class="dropdown-item">Luxury Estates</p>
-									<p class="dropdown-item">Tinsel Builders</p>
-									<p class="dropdown-item">Downtown Builders</p>
-									<p class="dropdown-item">Urban Spaces</p>
-									<p class="dropdown-item">Skyline Developers</p>
-									<p class="dropdown-item">Mordern Estates</p>
-									<p class="dropdown-item">Goldstein & Co.</p>
-								</ul>
-							</div>
-							<div class="dropdown">
-								<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2"
-									data-bs-toggle="dropdown" aria-expanded="false">Configuration</button>
-								<ul class="dropdown-menu dropdown-menu-dark configuration"
-									aria-labelledby="dropdownMenuButton2">
-									<p class="dropdown-item">2 BHK</p>
-									<p class="dropdown-item">3 BHK</p>
-									<p class="dropdown-item">4 BHK</p>
-									<p class="dropdown-item">5 BHK</p>
-									<p class="dropdown-item">6 BHK</p>
-									<p class="dropdown-item">7 BHK</p>
-								</ul>
-							</div>
-							<div class="dropdown">
-								<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2"
-									data-bs-toggle="dropdown" aria-expanded="false">Deal Type</button>
-								<ul class="dropdown-menu dropdown-menu-dark dealType"
-									aria-labelledby="dropdownMenuButton2">
-									<p class="dropdown-item">Buy</p>
-									<p class="dropdown-item">Rent</p>
-								</ul>
-							</div>
-							<div class="dropdown">
-								<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2"
-									data-bs-toggle="dropdown" aria-expanded="false">Location</button>
-								<ul class="dropdown-menu dropdown-menu-dark location"
-									aria-labelledby="dropdownMenuButton2">
-									<p class="dropdown-item">Rockford Hills</p>
-									<p class="dropdown-item">Richman</p>
-									<p class="dropdown-item">Vinewood Hills</p>
-									<p class="dropdown-item">Del Perro</p>
-									<p class="dropdown-item">Mirror Park</p>
-									<p class="dropdown-item">Vespucci Canals</p>
-									<p class="dropdown-item">Downtown Vinewood</p>
-									<p class="dropdown-item">La Puerta</p>
-									<p class="dropdown-item">Hawick</p>
-								</ul>
-							</div>
+					</div>
+					<div class="otherFilters">
+						<div class="dropdown">
+							<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2"
+								data-bs-toggle="dropdown" aria-expanded="false">Brand</button>
+							<ul class="dropdown-menu dropdown-menu-dark brand" aria-labelledby="dropdownMenuButton2">
+							</ul>
+						</div>
+						<div class="dropdown">
+							<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2"
+								data-bs-toggle="dropdown" aria-expanded="false">Engine</button>
+							<ul class="dropdown-menu dropdown-menu-dark engine" aria-labelledby="dropdownMenuButton2">
+							</ul>
+						</div>
+						<div class="dropdown">
+							<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2"
+								data-bs-toggle="dropdown" aria-expanded="false">Configuration</button>
+							<ul class="dropdown-menu dropdown-menu-dark configuration"
+								aria-labelledby="dropdownMenuButton2">
+							</ul>
+						</div>
+						<div class="dropdown">
+							<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2"
+								data-bs-toggle="dropdown" aria-expanded="false">Color</button>
+							<ul class="dropdown-menu dropdown-menu-dark color" aria-labelledby="dropdownMenuButton2">
+							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		</div>
 	</section>
 	<section class="cars" id="cars">
 		<br>
-		<div class="number-of-results"></div>
+		<div style="display: flex;">
+			<div class="filter-logo"><i class="fa-solid fa-filter filter"></i></div>
+			<div class="number-of-results"></div>
+		</div>
 		<br>
 		<div class="container container3"></div>
 	</section>
 	<section class="trusted">
 		<div class="logos">
-			<h1>Trusted by renowned brands</h1>
+			<h1>Trusted by renowned builders</h1>
 			<div class="logos-slide">
-				<img src="../Other Media/images/carlogo1.jpg" alt="">
-				<img src="../Other Media/images/carlogo2.png" alt="">
-				<img src="../Other Media/images/carlogo3.png" alt="" class="img1">
-				<img src="../Other Media/images/carlogo4.png" alt="" class="img2">
-				<img src="../Other Media/images/carlogo5.png" alt="">
-				<img src="../Other Media/images/carlogo6.png" alt="">
-				<img src="../Other Media/images/carlogo7.jpeg" alt="">
-				<img src="../Other Media/images/carlogo8.png" alt="" class="img3">
-				<img src="../Other Media/images/carlogo9.png" alt="">
+				<img src="../Other Media/images/vinewood-estates-high-resolution-logo-black-transparent.png" alt=""
+					class="vinewoodEstate">
+				<img src="../Other Media/images/goldstein--co-high-resolution-logo-black-transparent.png" alt="">
+				<img src="../Other Media/images/luxury-estates-high-resolution-logo-black-transparent.png" alt=""
+					class="img1">
+				<img src="../Other Media/images/file (3).png" alt="" class="img2">
+				<img src="../Other Media/images/skyline-developers-high-resolution-logo-black-transparent.png" alt="">
+				<img src="../Other Media/images/elite-builders-high-resolution-logo-black-transparent.png" alt="">
+				<img src="../Other Media/images/downtown-builders-high-resolution-logo-black-transparent.png" alt="">
+				<img src="../Other Media/images/urban-spaces-high-resolution-logo-black-transparent.png" alt=""
+					class="img3">
+				<img src="../Other Media/images/mordern-estates-high-resolution-logo-black-transparent.png" alt="">
 			</div>
 			<div class="logos-slide">
-				<img src="../Other Media/images/carlogo1.jpg" alt="">
-				<img src="../Other Media/images/carlogo2.png" alt="">
-				<img src="../Other Media/images/carlogo3.png" alt="">
-				<img src="../Other Media/images/carlogo4.png" alt="">
-				<img src="../Other Media/images/carlogo5.png" alt="">
-				<img src="../Other Media/images/carlogo5.png" alt="">
-				<img src="../Other Media/images/carlogo6.png" alt="">
-				<img src="../Other Media/images/carlogo8.png" alt="">
-				<img src="../Other Media/images/carlogo9.png" alt="">
+				<img src="../Other Media/images/vinewood-estates-high-resolution-logo-black-transparent.png" alt="">
+				<img src="../Other Media/images/goldstein--co-high-resolution-logo-black-transparent.png" alt="">
+				<img src="../Other Media/images/luxury-estates-high-resolution-logo-black-transparent.png" alt="">
+				<img src="../Other Media/images/file (3).png" alt="">
+				<img src="../Other Media/images/skyline-developers-high-resolution-logo-black-transparent.png" alt="">
+				<img src="../Other Media/images/elite-builders-high-resolution-logo-black-transparent.png" alt="">
+				<img src="../Other Media/images/downtown-builders-high-resolution-logo-black-transparent.png" alt="">
+				<img src="../Other Media/images/urban-spaces-high-resolution-logo-black-transparent.png" alt="">
+				<img src="../Other Media/images/mordern-estates-high-resolution-logo-black-transparent.png" alt="">
 			</div>
 		</div>
 	</section>
-	<section class="divertToHouse">
+	<section class="divertToCars">
 		<div class="conatiner">
 			<div class="row">
 				<div class="gif col-lg-4">
 					<img src="../Other Media/images/doodle_processed.png" alt="" width="200px" />
 				</div>
 				<div class="content2 col-lg-8">
-					<h2>Gaadi toh le li, lekin rakhoge kaha ?</h2>
+					<h2>Ghar toh le liya, lekin Gaadi ka kya ?</h2>
 					<h3>No worries we got you covered !</h3>
 					<h4>Click below, aur karo apni life set !</h4>
-					<button class="btn btn-primary">Visit LS Real Estate</button>
+					<button class="btn btn-primary">Visit LS Super Cars</button>
 				</div>
 			</div>
 		</div>

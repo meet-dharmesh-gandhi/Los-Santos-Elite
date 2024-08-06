@@ -79,11 +79,17 @@ export function checkScreenSize(isMobileScreen, clickedTab, window) {
             clickedTab.click();
             return false;
         }
+        return false;
     };
 
+    let isMobileScreenNow = false;
+
     const mediaQuery = window.matchMedia('(max-width: 431px)');
-    handleScreenSize(mediaQuery);
-    mediaQuery.addEventListener("change", handleScreenSize);
+    mediaQuery.addEventListener("change", () => { isMobileScreenNow = handleScreenSize(mediaQuery) });
+    if (isMobileScreenNow) {
+        return true;
+    }
+    return false;
 }
 
 Object.prototype.getLength = function () {

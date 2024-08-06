@@ -1,4 +1,31 @@
+import { toggleLikeState } from "./ls-real-estate-functions.js";
+import { createElement, numberToString } from "./utility-functions.js";
+
+export async function getLikedProperties(userName) {
+    try {
+        const likedPropertiesList = await fetch("http://localhost:3000/get-liked-properties", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ username: userName }),
+        });
+        const likedProperties = await likedPropertiesList.json();
+        return likedProperties;
+    } catch (error) { }
+}
+
+export function isLikedProperty(likedPropertiesList, id) {
+    for (let i = 0; i < likedPropertiesList.length; i++) {
+        if (likedPropertiesList[i]._id === id) {
+            return true;
+        }
+    }
+    return false;
+}
+
 export function createCarCard(
+    id,
     imgSrc,
     carName,
     price,
@@ -7,198 +34,86 @@ export function createCarCard(
     carPower,
     carMileage,
     carTopSpeed,
-    isMobileScreen
+    isMobileScreen,
+    document,
+    container,
+    likedPropertiesList
 ) {
-    const card = document.createElement("div");
-    card.className = "card col-6 col-md-6 col-lg-3";
-    card.id = "card1";
+    const card = createElement("div", container, { className: "card col-6 col-md-6 col-lg-3", id: "card1" }, document);
 
-    const img = document.createElement("img");
-    img.src = imgSrc;
-    img.alt = carName;
-    img.className = "card-img-top";
-    card.appendChild(img);
+    const img = createElement("img", card, { src: imgSrc, alt: carName, className: "card-img-top" }, document)
 
-    const likeButton = document.createElement("div");
-    likeButton.className = "like-button";
-    const likeButtonText = document.createElement("i");
-    likeButtonText.className = "fa-regular fa-heart";
-    likeButton.appendChild(likeButtonText);
-    likeButton.addEventListener("click", () => {
-        if (likeButtonText.classList.contains("fa-regular")) {
-            likeButtonText.classList.remove("fa-regular");
-            likeButtonText.classList.add("fa-solid");
-            addToWishlist(propertyName);
-        } else {
-            likeButtonText.classList.remove("fa-solid");
-            likeButtonText.classList.add("fa-regular");
-            removeFromWishlist(propertyName);
-        }
-        likeButtonText.classList.toggle("liked");
-    });
-    card.appendChild(likeButton);
+    const likeButton = createElement("div", card, { className: "like-button" }, document);
 
-    const cardBody = document.createElement("div");
-    cardBody.className = "card-body";
+    const likeButtonText = createElement("i", likeButton, { className: isLikedProperty(likedPropertiesList, id) ? "fa-solid fa-heart" : "fa-regular fa-heart" }, document);
 
-    const cardTitle = document.createElement("h5");
-    cardTitle.className = "card-title";
-    cardTitle.textContent = carName;
-    cardBody.appendChild(cardTitle);
+    likeButton.addEventListener("click", () => { toggleLikeState(likeButtonText, carName) });
+
+    const cardBody = createElement("div", card, { className: "card-body" }, document);
+
+    const cardTitle = createElement("h5", cardBody, { className: "card-title", textContent: carName }, document);
 
     if (!isMobileScreen) {
-        const cardText = document.createElement("p");
-        cardText.className = "card-price";
-        cardText.textContent = numberToString(price);
-        cardBody.appendChild(cardText);
 
-        const brand = document.createElement("p");
-        brand.className = "brand";
-        brand.textContent = carBrand;
-        cardBody.appendChild(brand);
+        const cardText = createElement("p", cardBody, { className: "card-price", textContent: numberToString(price) }, document);
 
-        const type = document.createElement("p");
-        type.className = "car-type";
-        type.textContent = carType;
-        cardBody.appendChild(type);
+        const brand = createElement("p", cardBody, { className: "brand", textContent: carBrand }, document);
 
-        const hr1 = document.createElement("hr");
-        cardBody.appendChild(hr1);
+        const type = createElement("p", cardBody, { className: "car-type", textContent: carType }, document);
 
-        const details = document.createElement("div");
-        details.className = "details";
+        const hr1 = createElement("hr", cardBody, {}, document);
 
-        const horsepowerIcon = document.createElement("i");
-        horsepowerIcon.className = "fa-brands fa-superpowers";
-        details.appendChild(horsepowerIcon);
+        const details = createElement("div", cardBody, { className: "details" }, document);
 
-        const power = document.createElement("p");
-        power.className = "power";
-        power.innerHTML = `<span class="num1">${carPower}</span> Hp`;
-        details.appendChild(power);
+        const horsepowerIcon = createElement("i", details, { className: "fa-brands fa-superpowers" }, document);
 
-        const carIcon = document.createElement("i");
-        carIcon.className = "fa-solid fa-car";
-        details.appendChild(carIcon);
+        const power = createElement("p", details, { className: "power", innerHTML: `<span class="num1">${carPower}</span> Hp` }, document)
 
-        const mileage = document.createElement("p");
-        mileage.className = "mileage";
-        mileage.innerHTML = `<span class="num2">${carMileage}</span> kmpl`;
-        details.appendChild(mileage);
+        const carIcon = createElement("i", details, { className: "fa-solid fa-car" }, document);
 
-        const speedIcon = document.createElement("i");
-        speedIcon.className = "fa-solid fa-bolt";
-        details.appendChild(speedIcon);
+        const mileage = createElement("p", details, { className: "mileage", innerHTML: `<span class="num2">${carMileage}</span> kmpl` }, document)
 
-        const topSpeed = document.createElement("p");
-        topSpeed.className = "topSpeed";
-        topSpeed.innerHTML = `<span class="num3">${carTopSpeed}</span> Km/h`;
-        details.appendChild(topSpeed);
+        const speedIcon = createElement("i", details, { className: "fa-solid fa-bolt" }, document);
 
-        cardBody.appendChild(details);
+        const topSpeed = createElement("p", details, { className: "topSpeed", innerHTML: `<span class="num3">${carTopSpeed}</span> Km/h` }, document)
 
-        const hr2 = document.createElement("hr");
-        cardBody.appendChild(hr2);
+        const hr2 = createElement("hr", cardBody, {}, document);
     } else {
-        document.createComment("some details start from here!!");
 
-        const someDetails = document.createElement("div");
-        someDetails.className = "someDetails";
-        cardBody.appendChild(someDetails);
+        const someDetails = createElement("div", cardBody, { className: "someDetails" }, document);
 
+        const leftSide = createElement("div", someDetails, { className: "left-side" }, document);
 
-        // left side
-        const leftSide = document.createElement("div");
-        leftSide.className = "left-side";
-        someDetails.appendChild(leftSide);
+        const cardPrice = createElement("p", leftSide, { className: "card-price", textContent: numberToString(price) }, document);
 
-        const cardPrice = document.createElement("p");
-        cardPrice.className = "card-price";
-        cardPrice.textContent = numberToString(price);
-        leftSide.appendChild(cardPrice);
+        const brand = createElement("p", leftSide, { className: "brand", textContent: carBrand }, document);
 
-        const brand = document.createElement("p");
-        brand.className = "brand";
-        brand.textContent = carBrand;
-        leftSide.appendChild(brand);
+        const type = createElement("p", leftSide, { className: "car-type", textContent: carType }, document);
 
-        const type = document.createElement("p");
-        type.className = "car-type";
-        type.textContent = carType;
-        leftSide.appendChild(type);
+        const verticalLine = createElement("div", someDetails, { className: "vertical-line" }, document);
 
+        const rightSide = createElement("div", someDetails, { className: "right-side" }, document);
 
-        // vertical line
-        const verticalLine = document.createElement("div");
-        verticalLine.className = "vertical-line";
-        someDetails.appendChild(verticalLine);
+        const rightSideElements = [bedroom, bathroom, area, "bedroom", "bathroom", "area"];
 
+        const rightSideIcons = [`<i class="fa-solid fa-bed"></i>`, `<i class="fa-solid fa-bath"></i>`, `<i class="fa-solid fa-chart-area"></i>`];
 
-        //right side
-        const rightSide = document.createElement("div");
-        rightSide.className = "right-side";
-        someDetails.appendChild(rightSide);
-
-        // first quality1
-        const quality1E1 = document.createElement("div");
-        quality1E1.className = "quality1";
-        quality1E1.innerHTML = `<i class="fa-solid fa-bed"></i>`;
-        rightSide.appendChild(quality1E1);
-
-        const bedrooms = document.createElement("p");
-        bedrooms.className = "bedrooms";
-        quality1E1.appendChild(bedrooms);
-
-        const num1E = document.createElement("span");
-        num1E.className = "num1";
-        num1E.textContent = `${bedroom} bedrooms`;
-        bedrooms.appendChild(num1E);
-
-        // second quality1
-        const quality1E2 = document.createElement("div");
-        quality1E2.className = "quality1";
-        quality1E2.innerHTML = `<i class="fa-solid fa-bed"></i>`;
-        rightSide.appendChild(quality1E2);
-
-        const bathrooms = document.createElement("p");
-        bathrooms.className = "bathrooms";
-        quality1E2.appendChild(bathrooms);
-
-        const num2E = document.createElement("span");
-        num2E.className = "num2";
-        num2E.textContent = `${bathroom} bathrooms`;
-        bathrooms.appendChild(num2E);
-
-        // third quality1
-        const quality1E3 = document.createElement("div");
-        quality1E3.className = "quality1";
-        quality1E3.innerHTML = `<i class="fa-solid fa-bed"></i>`;
-        rightSide.appendChild(quality1E3);
-
-        const areas = document.createElement("p");
-        areas.className = "area";
-        quality1E3.appendChild(areas);
-
-        const num3E = document.createElement("span");
-        num3E.className = "num3";
-        num3E.textContent = `${area} areas`;
-        areas.appendChild(num3E);
+        for (let i = 0; i < 3; i++) {
+            const qualityE = createElement("div", rightSide, { className: "quality1", innerHTML: rightSideIcons[i] }, document);
+            // here specific refers to either bedroom, bathroom or the area element
+            const specific = createElement("p", qualityE, { className: `${rightSideElements[i + 3]}${i === 2 ? "" : "s"}` }, document);
+            // adding "s" only if the current element is either bedroom or bathroom as both of them have "bedrooms" and "bathrooms" as classNames while area has "area" as its className.
+            const numE = createElement("span", specific, { className: `num${i + 1}`, textContent: `${rightSideElements[i]} ${rightSideElements[i + 3]}${i === 2 ? "" : "s"}` }, document);
+        }
 
         for (let i = 0; i < 2; i++) {
-            cardBody.appendChild(document.createElement("hr"));
+            createElement("hr", cardBody, {}, document)
         }
     }
 
-    const button = document.createElement("a");
-    button.className = "btn btn-primary btn1";
-    button.textContent = "View Details";
-    cardBody.appendChild(button);
+    const button = createElement("a", cardBody, { className: "btn btn-primary btn1", textContent: "View Details" }, document);
 
     button.addEventListener("click", () => {
-        button.href = `../HTML Files/items-page.html?name=${propertyName}&type=${propertyType}`;
+        button.href = `../HTML Files/items-page.html?name=${carName}&type=${carType}`;
     });
-
-    card.appendChild(cardBody);
-
-    document.querySelector(".container3").appendChild(card);
 }

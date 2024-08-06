@@ -10,6 +10,7 @@ const path = require("path");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
+const { log } = require("console");
 
 dotenv.config({ path: path.join(__dirname, "../ENV Files/.env") });
 
@@ -218,6 +219,8 @@ async function filter(filters) {
 async function getUniqueValues(values) {
 	const groupObject = { _id: null };
 	const projectList = [];
+	console.log(values);
+
 	for (let i = 0; i < values.length; i++) {
 		groupObject[i] = { $addToSet: `$${values[i]}` };
 		projectList.push(`$${i}`);
@@ -428,8 +431,225 @@ async function getCarDetails(query) {
 	return result;
 }
 
+async function searchProperties(Searched) {
+	const names = await Building_Details.distinct("Name");
+	const types = await Building_Details.distinct("Type");
+	const locations = await Building_Details.distinct("Location");
+	const configurations = await Building_Details.distinct("Configuration");
+	const areas = await Building_Details.distinct("Area");
+	const builderNames = await Building_Details.distinct("Builder Name");
+	const prices = await Building_Details.distinct("Price");
+	const states = await Building_Details.distinct("State");
+	let searchedNames,
+		searchedTypes,
+		searchedLocations,
+		searchedConfigurations,
+		searchedAreas,
+		searchedBuilderNames,
+		searchedPrices,
+		searchedStates;
+	searchedNames = names.filter((name) =>
+		name.toLowerCase().includes(Searched.toLowerCase())
+	);
+	searchedTypes = types.filter((type) =>
+		type.toLowerCase().includes(Searched.toLowerCase())
+	);
+	searchedLocations = locations.filter((location) =>
+		location.toLowerCase().includes(Searched.toLowerCase())
+	);
+	searchedConfigurations = configurations.filter((configuration) =>
+		Searched.toLowerCase().includes(configuration.toString().toLowerCase())
+	);
+	searchedAreas = areas.filter((area) =>
+		Searched.toLowerCase().includes(area.toString().toLowerCase())
+	);
+	searchedBuilderNames = builderNames.filter((builderName) =>
+		builderName.toLowerCase().includes(Searched.toLowerCase())
+	);
+	searchedPrices = prices.filter((price) =>
+		Searched.toLowerCase().includes(price.toString().toLowerCase())
+	);
+	searchedStates = states.filter((state) =>
+		state.toLowerCase().includes(Searched.toLowerCase())
+	);
+	const searchQuery = { $or: [] };
+	if (searchedNames.length != 0) {
+		searchQuery["$or"].push({ "Name": { $in: searchedNames } });
+	}
+	if (searchedTypes.length != 0) {
+		searchQuery["$or"].push({ "Type": { $in: searchedTypes } });
+	}
+	if (searchedLocations.length != 0) {
+		searchQuery["$or"].push({ "Location": { $in: searchedLocations } });
+	}
+	if (searchedConfigurations.length != 0) {
+		searchQuery["$or"].push({ "Configuration": { $in: searchedConfigurations } });
+	}
+	if (searchedBuilderNames.length != 0) {
+		searchQuery["$or"].push({ "Builder Name": { $in: searchedBuilderNames } });
+	}
+	if (searchedPrices.length != 0) {
+		searchQuery["$or"].push({ "Price": { $in: searchedPrices } });
+	}
+	if (searchedStates.length != 0) {
+		searchQuery["$or"].push({ "State": { $in: searchedStates } });
+	}
+	if (searchQuery.$or.length !== 0) {
+		const searchResults = await Building_Details.find(searchQuery).toArray();
+		return searchResults;
+	} else {
+		return [];
+	}
+}
+
 async function getExtremeValues() {
 	const result = await Building_Details.aggregate([{ $group: { _id: null, maxPrice: { $max: "$Price" }, minPrice: { $min: "$Price" }, maxArea: { $max: "$Area" }, minArea: { $min: "$Area" }, maxRating: { $max: "$Rating" }, minRating: { $min: "$Rating" } } }]).toArray();
+	return result;
+}
+
+async function getExtremeCarValues() {
+	const result = await Car_Details.aggregate([{ $group: { _id: null, maxPrice: { $max: "$Price" }, minPrice: { $min: "$Price" }, maxNumberOfSeats: { $max: "$Number Of Seats" }, minNumberOfSeats: { $min: "$Number Of Seats" }, maxRating: { $max: "$Brand Rating" }, minRating: { $min: "$Brand Rating" }, maxMileage: { $max: "$Mileage" }, minMileage: { $min: "$Mileage" } } }]).toArray();
+	return result;
+}
+
+async function getUniqueCarValues(values) {
+	const groupObject = { _id: null };
+	const projectList = [];
+	for (let i = 0; i < values.length; i++) {
+		groupObject[i] = { $addToSet: `$${values[i]}` };
+		projectList.push(`$${i}`);
+	}
+	const projectObject = { _id: 0, "unique values": projectList };
+	const result = await Car_Details.aggregate([
+		{ $group: groupObject },
+		{ $project: projectObject },
+	]).toArray();
+	return result[0]["unique values"];
+}
+
+async function searchCars(Searched) {
+	const names = await Car_Details.distinct("Name");
+	const types = await Car_Details.distinct("Type");
+	const numberOfSeats = await Car_Details.distinct("Number Of Seats");
+	const configurations = await Car_Details.distinct("Configuration");
+	const brand = await Car_Details.distinct("Brand");
+	const color = await Car_Details.distinct("Color");
+	const mileage = await Car_Details.distinct("Mileage");
+	const descriptions = await Car_Details.distinct("Descriptions");
+	let searchedNames,
+		searchedTypes,
+		searchedNumberOfSeats,
+		searchedConfigurations,
+		searchedBrands,
+		searchedColor,
+		searchedMileage,
+		searchedDescriptions;
+	searchedNames = names.filter((name) =>
+		name.toLowerCase().includes(Searched.toLowerCase())
+	);
+	searchedTypes = types.filter((type) =>
+		type.toLowerCase().includes(Searched.toLowerCase())
+	);
+	searchedNumberOfSeats = numberOfSeats.filter((numberOfSeats) =>
+		numberOfSeats.toString().toLowerCase().includes(Searched.toLowerCase())
+	);
+	searchedConfigurations = configurations.filter((configuration) =>
+		Searched.toLowerCase().includes(configuration.toString().toLowerCase())
+	);
+	searchedBrands = brand.filter((brand) =>
+		Searched.toLowerCase().includes(brand.toString().toLowerCase())
+	);
+	searchedColor = color.filter((color) => {
+		color.toLowerCase().includes(Searched.toLowerCase())
+	}
+	);
+	searchedMileage = mileage.filter((price) =>
+		Searched.toLowerCase().includes(price.toString().toLowerCase())
+	);
+	searchedDescriptions = descriptions.filter((descriptions) => {
+		return Object.keys(descriptions).some((description) => {
+			return descriptions[description].toLowerCase().includes(Searched.toLowerCase());
+		});
+	}
+	);
+	const searchQuery = { $or: [] };
+	if (searchedNames.length != 0) {
+		searchQuery["$or"].push({ "Name": { $in: searchedNames } });
+	}
+	if (searchedTypes.length != 0) {
+		searchQuery["$or"].push({ "Type": { $in: searchedTypes } });
+	}
+	if (searchedNumberOfSeats.length != 0) {
+		searchQuery["$or"].push({ "Number Of Seats": { $in: searchedNumberOfSeats } });
+	}
+	if (searchedConfigurations.length != 0) {
+		searchQuery["$or"].push({ "Configuration": { $in: searchedConfigurations } });
+	}
+	if (searchedColor.length != 0) {
+		searchQuery["$or"].push({ "Color": { $in: searchedColor } });
+	}
+	if (searchedMileage.length != 0) {
+		searchQuery["$or"].push({ "Mileage": { $in: searchedMileage } });
+	}
+	if (searchedDescriptions.length != 0) {
+		searchQuery["$or"].push({ "Descriptions": { $in: searchedDescriptions } });
+	}
+	if (searchQuery.$or.length !== 0) {
+		const searchResults = await Car_Details.find(searchQuery).toArray();
+		return searchResults;
+	} else {
+		return [];
+	}
+}
+
+async function filterCars(filters) {
+	const {
+		type,
+		minPrice,
+		maxPrice,
+		minNumberOfSeats,
+		maxNumberOfSeats,
+		minRating,
+		maxRating,
+		minMileage,
+		maxMileage,
+		brand,
+		engineType,
+		configuration,
+		color,
+	} = filters;
+	console.log(filters);
+
+	const query = {
+		$and: [
+			{ Price: { $lte: maxPrice } },
+			{ Price: { $gte: minPrice } },
+			{ "Number Of Seats": { $lte: maxNumberOfSeats } },
+			{ "Number Of Seats": { $gte: minNumberOfSeats } },
+			{ "Brand Rating": { $lte: maxRating } },
+			{ "Brand Rating": { $gte: minRating } },
+			{ "Mileage": { $lte: maxMileage } },
+			{ "Mileage": { $gte: minMileage } }
+		]
+	};
+	if (type != "All") {
+		query.$and.push({ Type: type });
+	}
+	// builderName, configuration, dealType and location are arrays
+	if (brand.length > 0) {
+		query.$and.push({ Brand: { $in: brand } });
+	}
+	if (engineType.length > 0) {
+		query.$and.push({ "Engine.Other Factors": { $in: engineType } });
+	}
+	if (configuration.length > 0) {
+		query.$and.push({ Configuration: { $in: configuration } });
+	}
+	if (color.length > 0) {
+		query.$and.push({ Color: { $in: color } });
+	}
+	console.log(JSON.stringify(query));
+	const result = await Car_Details.find(query).toArray();
 	return result;
 }
 
@@ -607,6 +827,8 @@ app.post("/filter-properties", async (req, res) => {
 app.post("/get-unique-values", async (req, res) => {
 	try {
 		const { values } = req.body;
+		console.log(values);
+
 		const result = await getUniqueValues(values);
 		res.json(result);
 	} catch (error) {
@@ -638,74 +860,8 @@ app.post("/remove-from-wishlist", async (req, res) => {
 app.post("/search", async (req, res) => {
 	try {
 		const { Searched } = req.body;
-		const names = await Building_Details.distinct("Name");
-		const types = await Building_Details.distinct("Type");
-		const locations = await Building_Details.distinct("Location");
-		const configurations = await Building_Details.distinct("Configuration");
-		const areas = await Building_Details.distinct("Area");
-		const builderNames = await Building_Details.distinct("Builder Name");
-		const prices = await Building_Details.distinct("Price");
-		const states = await Building_Details.distinct("State");
-		let searchedNames,
-			searchedTypes,
-			searchedLocations,
-			searchedConfigurations,
-			searchedAreas,
-			searchedBuilderNames,
-			searchedPrices,
-			searchedStates;
-		searchedNames = names.filter((name) =>
-			name.toLowerCase().includes(Searched.toLowerCase())
-		);
-		searchedTypes = types.filter((type) =>
-			type.toLowerCase().includes(Searched.toLowerCase())
-		);
-		searchedLocations = locations.filter((location) =>
-			location.toLowerCase().includes(Searched.toLowerCase())
-		);
-		searchedConfigurations = configurations.filter((configuration) =>
-			Searched.toLowerCase().includes(configuration.toString().toLowerCase())
-		);
-		searchedAreas = areas.filter((area) =>
-			Searched.toLowerCase().includes(area.toString().toLowerCase())
-		);
-		searchedBuilderNames = builderNames.filter((builderName) =>
-			builderName.toLowerCase().includes(Searched.toLowerCase())
-		);
-		searchedPrices = prices.filter((price) =>
-			Searched.toLowerCase().includes(price.toString().toLowerCase())
-		);
-		searchedStates = states.filter((state) =>
-			state.toLowerCase().includes(Searched.toLowerCase())
-		);
-		const searchQuery = { $or: [] };
-		if (searchedNames.length != 0) {
-			searchQuery["$or"].push({ "Name": { $in: searchedNames } });
-		}
-		if (searchedTypes.length != 0) {
-			searchQuery["$or"].push({ "Type": { $in: searchedTypes } });
-		}
-		if (searchedLocations.length != 0) {
-			searchQuery["$or"].push({ "Location": { $in: searchedLocations } });
-		}
-		if (searchedConfigurations.length != 0) {
-			searchQuery["$or"].push({ "Configuration": { $in: searchedConfigurations } });
-		}
-		if (searchedBuilderNames.length != 0) {
-			searchQuery["$or"].push({ "Builder Name": { $in: searchedBuilderNames } });
-		}
-		if (searchedPrices.length != 0) {
-			searchQuery["$or"].push({ "Price": { $in: searchedPrices } });
-		}
-		if (searchedStates.length != 0) {
-			searchQuery["$or"].push({ "State": { $in: searchedStates } });
-		}
-		if (searchQuery.$or.length !== 0) {
-			const searchResults = await Building_Details.find(searchQuery).toArray();
-			res.json(searchResults);
-		} else {
-			res.json([]);
-		}
+		const results = await searchProperties(Searched);
+		res.json(results);
 	} catch (error) {
 		console.log(error);
 		res.status(500).send(error);
@@ -987,6 +1143,63 @@ app.get("/get-extreme-values", async (req, res) => {
 		res.status(500).send(error);
 	}
 })
+
+// car API's from here:
+
+app.get("/get-extreme-car-values", async (req, res) => {
+	try {
+		const result = await getExtremeCarValues();
+		res.json(result);
+	} catch (error) {
+		console.error(error);
+		res.status(500).send(error);
+	}
+})
+
+app.post("/get-unique-car-values", async (req, res) => {
+	try {
+		const { values } = req.body;
+		const result = await getUniqueCarValues(values);
+		res.json(result);
+	} catch (error) {
+		console.error(error);
+		res.status(500).send(error);
+	}
+})
+
+app.post("/search-cars", async (req, res) => {
+	try {
+		const { Searched } = req.body;
+		console.log(Searched);
+		const result = await searchCars(Searched);
+		res.json(result);
+	} catch (error) {
+		console.error(error);
+		res.status(500).send(error);
+	}
+})
+
+app.post("/filter-cars", async (req, res) => {
+	try {
+		const result = await filterCars(req.body);
+		res.json(result);
+	} catch (error) {
+		console.error(error);
+		res.status(500).send(error);
+	}
+});
+
+app.post("/get-car-details", async (req, res) => {
+	try {
+		const result = await getCarDetails(req.body);
+		res.json(result);
+	} catch (error) {
+		console.error(error);
+		res.status(500).send(error);
+	}
+})
+
+
 
 app.get("/", (req, res) => {
 	res.send("PhonePe is On!!");
