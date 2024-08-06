@@ -4,7 +4,7 @@ import { redirectUser } from "../JS Files/sign-in-page.js";
 
 const urlParams = new URLSearchParams(window.location.search);
 const nextPage = urlParams.get("goto");
-const SERVER_URL = "https://los-santos-elite-1.onrender.com/";
+const SERVER_URL = "https://los-santos-elite-1.onrender.com";
 
 
 const firebaseConfig = {
@@ -136,7 +136,7 @@ const addNewUser = async (username, email, password) => {
     if (data === "Username Exists!!") {
       alert("Username Exists!!");
     } else {
-      window.location.href = `../HTML Files/sign-in-page.html?new-account=true&goto=${nextPage}`;
+      window.location.href = `./sign-in-page.html?new-account=true&goto=${nextPage}`;
     }
   } catch (error) {
     console.error("Error adding credentials: ", error);
