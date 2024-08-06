@@ -1,6 +1,4 @@
 let USER_NAME = "";
-const SERVER_URL = "https://los-santos-elite-1.onrender.com/";
-
 
 const displayUserDetails = (userDetails) => {
     const userProfilePicture = document.querySelector("#userProfilePicture");
@@ -11,7 +9,7 @@ const displayUserDetails = (userDetails) => {
 let userDetails;
 const token = localStorage.getItem("user details token");
 try {
-    const getUserDetails = await fetch(`${SERVER_URL}/get-user-details`, {
+    const getUserDetails = await fetch("http://localhost:3000/get-user-details", {
         headers: { "Authorization": `Bearer ${token}` },
     });
     if (!getUserDetails.ok) {
@@ -67,7 +65,7 @@ let checkDetailsChange = { ...details };
 
 const checkSeller = async () => {
     const username = USER_NAME;
-    const seller = await fetch(`${SERVER_URL}/check-if-seller`, {
+    const seller = await fetch("http://localhost:3000/check-if-seller", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -80,7 +78,7 @@ const checkSeller = async () => {
 }
 
 const getSellerPremiumType = async () => {
-    const response = await fetch(`${SERVER_URL}/get-seller-premium-type`, {
+    const response = await fetch("http://localhost:3000/get-seller-premium-type", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -94,7 +92,7 @@ const getSellerPremiumType = async () => {
 
 const getUniqueID = async () => {
     try {
-        const response = await fetch(`${SERVER_URL}/get-unique-id`, {
+        const response = await fetch("http://localhost:3000/get-unique-id", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -117,7 +115,7 @@ const saveTestDetails = async (details) => {
         await getUniqueID();
     }
     try {
-        const response = await fetch(`${SERVER_URL}/save-test-details`, {
+        const response = await fetch("http://localhost:3000/save-test-details", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -132,7 +130,7 @@ const saveTestDetails = async (details) => {
 
 const generateDescriptions = async () => {
     try {
-        const response = await fetch(`${SERVER_URL}/get-descriptions`);
+        const response = await fetch("http://localhost:3000/get-descriptions");
         if (!response.ok) {
             throw new Error("Something went wrong while getting descriptions!!");
         }
@@ -199,7 +197,7 @@ const displayDescriptions = async () => {
 
 const displayCategories = async () => {
     try {
-        const response = await fetch(`${SERVER_URL}/get-categories`);
+        const response = await fetch("http://localhost:3000/get-categories");
         const data = await response.json();
         const propertyCategoryList = document.querySelector(".propertyCategoryList");
         data.forEach((category) => {
@@ -223,7 +221,7 @@ const displayCategories = async () => {
 
 const displayStates = async () => {
     try {
-        const response = await fetch(`${SERVER_URL}/get-states`);
+        const response = await fetch("http://localhost:3000/get-states");
         const data = await response.json();
         const propertyStateList = document.querySelector(".propertyStateList");
         data.forEach((state) => {
@@ -241,7 +239,7 @@ const displayStates = async () => {
 
 const loadFromSaved = async (id) => {
     try {
-        const response = await fetch(`${SERVER_URL}/get-saved-details`, {
+        const response = await fetch("http://localhost:3000/get-saved-details", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -611,7 +609,7 @@ createListingButton.addEventListener("click", async () => {
     if (!addDescriptions()) return;
     const { _id, ...reqDetails } = details;
     try {
-        const result = await fetch(`${SERVER_URL}/create-new-listing`, {
+        const result = await fetch("http://localhost:3000/create-new-listing", {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",

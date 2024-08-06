@@ -1,11 +1,9 @@
 import { toggleLikeState } from "./ls-real-estate-functions.js";
 import { createElement, numberToString } from "./utility-functions.js";
 
-const SERVER_URL = "https://los-santos-elite-1.onrender.com/";
-
 export async function getLikedProperties(userName) {
     try {
-        const likedPropertiesList = await fetch(`${SERVER_URL}/get-liked-properties`, {
+        const likedPropertiesList = await fetch("http://localhost:3000/get-liked-properties", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

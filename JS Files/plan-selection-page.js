@@ -4,10 +4,8 @@ const paymentStatus = urlParams.has("status") ? urlParams.get("status") : "";
 
 let userDetails;
 const token = localStorage.getItem("user details token");
-const SERVER_URL = "https://los-santos-elite-1.onrender.com/";
-
 try {
-  const getUserDetails = await fetch(`${SERVER_URL}/get-user-details`, {
+  const getUserDetails = await fetch("http://localhost:3000/get-user-details", {
     headers : { "Authorization" : `Bearer ${token}` },
   });
   console.log(getUserDetails);
@@ -22,7 +20,7 @@ try {
 
 const setPremiumType = async (i) => {
     try {
-        const response = await fetch(`${SERVER_URL}/set-premium-type`, {
+        const response = await fetch("http://localhost:3000/set-premium-type", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -44,7 +42,7 @@ const activateUserWallet = async () => {
     const USER_NAME = userDetails.userName;
     console.log("USER_NAME: " + USER_NAME);
     try {
-        const response = await fetch(`${SERVER_URL}/activate-e-wallet`, {
+        const response = await fetch("http://localhost:3000/activate-e-wallet", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -79,7 +77,7 @@ const payPremium = (USD) => {
         `Are you sure, you want to pay $${USD}??`
       );
       console.log(Math.floor(USD * 83.76));
-      window.location.href = `${SERVER_URL}/pay-premium/${Math.floor(USD * 83.76) * 100}`;
+      window.location.href = `http://localhost:3000/pay-premium/${Math.floor(USD * 83.76) * 100}`;
 }
 
 let buyPlan1 = document.querySelector(".buy1")

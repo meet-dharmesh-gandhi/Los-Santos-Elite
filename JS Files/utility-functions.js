@@ -1,5 +1,3 @@
-const SERVER_URL = "https://los-santos-elite-1.onrender.com/";
-
 export function setProperty(element, toSet, value) {
     if (value) {
         element[toSet] = value;
@@ -47,7 +45,7 @@ export function trimString(numberString) {
 export async function getUserDetails() {
     const token = localStorage.getItem("user details token");
     try {
-        const getUserDetails = await fetch(`${SERVER_URL}/get-user-details`, {
+        const getUserDetails = await fetch("http://localhost:3000/get-user-details", {
             headers: { "Authorization": `Bearer ${token}` },
         });
         if (!getUserDetails.ok) {
