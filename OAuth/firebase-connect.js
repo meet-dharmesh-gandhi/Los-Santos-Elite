@@ -37,8 +37,6 @@ async function updateUserProfile(user, authMethod) {
     throw new Error("Error checking user email");
   };
   const userExistsResponse = await userExists.json();
-  console.log(userExistsResponse);
-
   if (JSON.stringify(userExistsResponse[0]) === "\"true\"" && authMethod === "Sign In") {
     const setUserDetails = await fetch("http://localhost:3000/login", {
       method: "POST",
@@ -52,7 +50,7 @@ async function updateUserProfile(user, authMethod) {
       localStorage.setItem("user details token", data.token);
     }
     redirectUser();
-  } else if (JSON.stringify(userExistsResponse[0]) === "false" && authMethod === "Sign Up") {
+  } else if (JSON.stringify(userExistsResponse[0]) === "\"false\"" && authMethod === "Sign Up") {
     addNewUser(userName, userEmail, document.querySelector(".password"));
   } else if (authMethod === "Sign Up") {
     alert("Account Exists!!");
