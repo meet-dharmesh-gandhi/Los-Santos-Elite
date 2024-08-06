@@ -26,7 +26,7 @@ async function updateUserProfile(user, authMethod) {
   const userName = user.displayName;
   const userEmail = user.email;
   const userProfilePicture = user.photoURL;
-  const userExists = await fetch("http://localhost:3000/user-email-exists", {
+  const userExists = await fetch("https://los-santos-elite-render-test.onrender.com/user-email-exists", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -107,7 +107,7 @@ onAuthStateChanged(auth, (user) => {
 
 const addNewUser = async (username, email, password) => {
   try {
-    const response = await fetch("http://localhost:3000/add-new-user", {
+    const response = await fetch("https://los-santos-elite-render-test.onrender.com/add-new-user", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
