@@ -1,4 +1,4 @@
-# Los Sentos Elite
+# Los Santos Elite
 
 Buying and Selling items is a very hectic task in Los Sentos. But, Los Sentos Elite is making it easy, with it's variety of listing you can see a lot of properties and car ranging from the comfort to luxury, depending on your needs. Don't worry, if you want to sell your properties, we are for you too, with Los Sentos Elite, you can sell properties with just a cost of $50/month.
 
