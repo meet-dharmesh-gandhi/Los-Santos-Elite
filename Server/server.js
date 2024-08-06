@@ -38,7 +38,7 @@ app.use(session({
 }));
 
 app.use(cors({
-	origin: ['http://127.0.0.1:5500', "https://los-santos-elite-1.onrender.com"],
+	origin: ["https://los-santos-elite-1.onrender.com"],
 	credentials: true
 }));
 
