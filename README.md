@@ -21,15 +21,10 @@ Buying and Selling items is a very hectic task in Los Sentos. But, Los Sentos El
 
 # Screenshots
 ![Screenshot 2024-08-06 234122](https://github.com/user-attachments/assets/055d4d14-0a38-4329-aa98-7262064a8432)
-
 ![Screenshot 2024-08-06 234143](https://github.com/user-attachments/assets/3ab18b41-736d-402f-9bc4-7b6252cbc795)
-
 ![Screenshot 2024-08-06 234022](https://github.com/user-attachments/assets/0367b7be-2004-4cd6-b215-5f41ff47741c)
-
 ![Screenshot 2024-08-06 234044](https://github.com/user-attachments/assets/db4387b5-18cf-4017-89dc-132726234da1)
-
 ![Screenshot 2024-08-06 235019](https://github.com/user-attachments/assets/dc84e7f1-5ac2-4bf6-a3ba-bca84f3ce9cb)
-
 ![Screenshot 2024-08-06 235036](https://github.com/user-attachments/assets/0ccbefe7-9f66-4ee5-ace2-0968ed1e2a5d)
 
 
