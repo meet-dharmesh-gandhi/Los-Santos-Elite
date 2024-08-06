@@ -16,6 +16,7 @@ dotenv.config({ path: path.join(__dirname, "../ENV Files/.env") });
 
 const app = express();
 const port = 3000;
+const SERVER_URL = "https://los-santos-elite-1.onrender.com/";
 
 const HOST_URL = process.env.HOST_URL;
 const MERCHANT_ID = process.env.MERCHANT_ID;
@@ -37,7 +38,7 @@ app.use(session({
 }));
 
 app.use(cors({
-	origin: 'http://127.0.0.1:5500',
+	origin: ['http://127.0.0.1:5500', "https://los-santos-elite-1.onrender.com/"],
 	credentials: true
 }));
 
@@ -1003,7 +1004,7 @@ app.get("/pay/:amount", async (req, res) => {
 		merchantUserId: "MUID" + userId,
 		name: "meet",
 		amount,
-		redirectUrl: `http://localhost:${port}/redirect-url/${merchantTransactionId}`,
+		redirectUrl: `${SERVER_URL}/redirect-url/${merchantTransactionId}`,
 		redirectMode: "POST",
 		mobileNumber: "9999999999",
 		paymentInstrument: { type: "PAY_PAGE" },
@@ -1086,7 +1087,7 @@ app.get("/pay-premium/:amount", async (req, res) => {
 		merchantTransactionId: merchantTransactionId,
 		merchantUserId: userId,
 		amount,
-		redirectUrl: `http://localhost:${port}/premium-redirect-url/${merchantTransactionId}/${amount}`,
+		redirectUrl: `${SERVER_URL}/premium-redirect-url/${merchantTransactionId}/${amount}`,
 		redirectMode: "REDIRECT",
 		mobileNumber: "9999999999",
 		paymentInstrument: { type: "PAY_PAGE" },
