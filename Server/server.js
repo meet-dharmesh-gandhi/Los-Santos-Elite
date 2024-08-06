@@ -39,6 +39,7 @@ app.use(session({
 
 app.use(cors({
 	origin: ["https://los-santos-elite-bbb4.vercel.app"],
+	methods: ['GET', 'POST', 'DELETE', 'PUT'],
 	credentials: true
 }));
 
