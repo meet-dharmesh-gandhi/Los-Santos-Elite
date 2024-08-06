@@ -30,6 +30,21 @@ const testProperties = {};
 
 const secretKey = process.env.SESSION_SECRET_KEY;
 
+const allowedOrigins = ['http://127.0.0.1:5500', "https://los-santos-elite-render-test-1.onrender.com"];
+
+const corsOptions = {
+	origin: function (origin, callback) {
+		if (!origin) return callback(null, true);
+		if (allowedOrigins.indexOf(origin) === -1) {
+			const msg = "CORS Error!!";
+			return callback(new Error(msg), false);
+		}
+		return callback(null, true);
+	},
+	methods: ["GET", "PUT", "POST", "DELETE"],
+	credentials: true,
+}
+
 app.use(session({
 	secret: secretKey,
 	resave: false,
@@ -37,10 +52,7 @@ app.use(session({
 	cookie: { secure: false, sameSite: true }
 }));
 
-app.use(cors({
-	origin: ['http://127.0.0.1:5500', "https://los-santos-elite-render-test-1.onrender.com"],
-	credentials: true
-}));
+app.use(cors(corsOptions));
 
 app.use(cookieParser());
 
