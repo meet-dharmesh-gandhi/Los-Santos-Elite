@@ -38,7 +38,7 @@ async function updateUserProfile(user, authMethod) {
   };
   const userExistsResponse = await userExists.json();
   if (JSON.stringify(userExistsResponse[0]) === "\"true\"" && authMethod === "Sign In") {
-    const setUserDetails = await fetch("http://localhost:3000/login", {
+    const setUserDetails = await fetch("https://los-santos-elite-render-test.onrender.com/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
