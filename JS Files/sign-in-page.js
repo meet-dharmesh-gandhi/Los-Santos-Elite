@@ -90,13 +90,13 @@ const checkUserExistence = async (username, password) => {
 
 const redirectUser = () => {
   if (nextPage === "real-estate") {
-    window.location.href = "../HTML Files/ls-real-estate.html";
+    window.location.href = "./ls-real-estate.html";
   } else if (nextPage === "super-cars") {
-    window.location.href = "../HTML Files/ls-super-cars.html";
+    window.location.href = "./ls-super-cars.html";
   } else if (nextPage === "sell") {
-    window.location.href = "../HTML Files/sell-page.html";
+    window.location.href = "./sell-page.html";
   } else {
-    window.location.href = "../HTML Files/main-page.html";
+    window.location.href = "./main-page.html";
   }
 }
 
