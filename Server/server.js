@@ -39,12 +39,12 @@ app.use(session({
 
 
 app.use(cors({
-  origin: ["https://los-santos-elite-bbb4.vercel.app", "http://127.0.0.1:5500"],
+  origin: ["https://los-santos-elite5.vercel.app", "http://127.0.0.1:5500"],
   credentials: true
 }));
 
 app.options('*', cors({
-  origin: ["https://los-santos-elite-bbb4.vercel.app", "http://127.0.0.1:5500"],
+  origin: ["https://los-santos-elite5.vercel.app", "http://127.0.0.1:5500"],
   credentials: true
 }));
 
@@ -472,7 +472,7 @@ app.post("/user-email-exists", async (req, res) => {
 })
 
 app.post("/login", async (req, res) => {
-	res.setHeader('Access-Control-Allow-Origin', 'https://los-santos-elite-bbb4.vercel.app');
+	res.setHeader('Access-Control-Allow-Origin', 'https://los-santos-elite5.vercel.app');
 	try {
 		let { userName, userEmail, userProfilePicture } = req.body;
 		if (userProfilePicture === "default") {
@@ -501,7 +501,7 @@ app.get("/get-user-details", authenticateToken, async (req, res) => {
 });
 
 app.post("/add-new-user", async (req, res) => {
-	res.setHeader('Access-Control-Allow-Origin', 'https://los-santos-elite-bbb4.vercel.app');
+	res.setHeader('Access-Control-Allow-Origin', 'https://los-santos-elite5.vercel.app');
 	try {
 		const existence = await checkUserExistence({ username: req.body.username });
 		if (existence.length == 0) {
@@ -517,7 +517,7 @@ app.post("/add-new-user", async (req, res) => {
 });
 
 app.post("/check-user-existence", async (req, res) => {
-	res.setHeader('Access-Control-Allow-Origin', 'https://los-santos-elite-bbb4.vercel.app');
+	res.setHeader('Access-Control-Allow-Origin', 'https://los-santos-elite5.vercel.app');
 	try {
 		const existence = await checkUserExistence(req.body);
 		if (existence.length == 0) {
