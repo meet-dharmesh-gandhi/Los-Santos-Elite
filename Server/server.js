@@ -653,6 +653,11 @@ async function filterCars(filters) {
 	return result;
 }
 
+async function getCarSpecifics(values) {
+	const result = Car_Details.find(values).toArray();
+	return result;
+}
+
 
 
 
@@ -1192,6 +1197,16 @@ app.post("/filter-cars", async (req, res) => {
 app.post("/get-car-details", async (req, res) => {
 	try {
 		const result = await getCarDetails(req.body);
+		res.json(result);
+	} catch (error) {
+		console.error(error);
+		res.status(500).send(error);
+	}
+})
+
+app.post("/get-car-specifics", async (req, res) => {
+	try {
+		const result = await getCarSpecifics(req.body);
 		res.json(result);
 	} catch (error) {
 		console.error(error);

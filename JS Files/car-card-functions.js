@@ -33,7 +33,7 @@ export function createCarCard(
     carType,
     carPower,
     carMileage,
-    carTopSpeed,
+    numberOfSeats,
     isMobileScreen,
     document,
     container,
@@ -55,7 +55,7 @@ export function createCarCard(
 
     if (!isMobileScreen) {
 
-        const cardText = createElement("p", cardBody, { className: "card-price", textContent: numberToString(price) }, document);
+        const cardText = createElement("p", cardBody, { className: "card-price", textContent: "$ " + numberToString(price) }, document);
 
         const brand = createElement("p", cardBody, { className: "brand", textContent: carBrand }, document);
 
@@ -75,7 +75,7 @@ export function createCarCard(
 
         const speedIcon = createElement("i", details, { className: "fa-solid fa-bolt" }, document);
 
-        const topSpeed = createElement("p", details, { className: "topSpeed", innerHTML: `<span class="num3">${carTopSpeed}</span> Km/h` }, document)
+        const topSpeed = createElement("p", details, { className: "topSpeed", innerHTML: `<span class="num3">${numberOfSeats}</span> Km/h` }, document)
 
         const hr2 = createElement("hr", cardBody, {}, document);
     } else {
@@ -114,6 +114,6 @@ export function createCarCard(
     const button = createElement("a", cardBody, { className: "btn btn-primary btn1", textContent: "View Details" }, document);
 
     button.addEventListener("click", () => {
-        button.href = `../HTML Files/items-page.html?name=${carName}&type=${carType}`;
+        button.href = `../HTML Files/cars-item-page.html?name=${carName}&type=${carType}`;
     });
 }

@@ -19,7 +19,7 @@ export async function setExtremeValues(minPriceInput, maxPriceInput, minNumberOf
     getElement(maxPriceInput, document).textContent = extremeValues[0].maxPrice;
     getElement(minNumberOfSeatsInput, document).textContent = extremeValues[0].minNumberOfSeats;
     getElement(maxNumberOfSeatsInput, document).textContent = extremeValues[0].maxNumberOfSeats;
-    getElement(minMileageInput, document).textContent = extremeValues[0].minMileage;
+    getElement(minMileageInput, document).textContent = 0;
     getElement(maxMileageInput, document).textContent = extremeValues[0].maxMileage;
 }
 

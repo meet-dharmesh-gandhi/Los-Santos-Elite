@@ -4,7 +4,7 @@
 // 3. link the profile page
 // 4. add and remove liked properties according to id not name
 
-import { addLeftArrowIcon, addRightArrowIcon, createPropertyCard } from "./property-card-functions.js";
+import { addLeftArrowIcon, addRightArrowIcon } from "./property-card-functions.js";
 import { createElement, getElement, getRandomNumber, getSibling, load, redirectTo, unLoad } from "./utility-functions.js";
 import { getAllPropertyDetails, getAttributes, getPropertyDetails, getSearchedProperties, filterCars, addToWishlist, removeFromWishlist } from "../JS Files/ls-super-cars-api-fetches.js";
 import { createCarCard } from "./car-card-functions.js";
@@ -92,22 +92,23 @@ export function addNewData(
     tabContents,
     tab
 ) {
-
-    console.log("changed!!");
-
-
     // i can add new data by taking the tabContents and the two sub categories as params and then assign them accordingly and then finally return the updated tabContents
-    const paramsList = ["id", "carTypes", "carNames", "numberOfSeats", "prices", "brands", "engineHorsePowers", "mileages", "images"];
+    const paramsList = ["id", "images", "carNames", "prices", "brands", "carTypes", "engineHorsePowers", "mileages", "numberOfSeats"];
+    const dataParamsOrder = ["_id", "Images", "Name", "Price", "Brand", "Type", "Engine.Horsepower", "Mileage", "Number Of Seats"]
 
     container.innerHTML = "";
 
     for (let i = 0; i < paramsList.length; i++) {
-        tabContents[paramsList[i]][tab].splice();
+        tabContents[paramsList[i]][tab].splice(0);
     }
 
     for (let i = 0; i < newData.length; i++) {
         for (let j = 0; j < paramsList.length; j++) {
-            tabContents[paramsList[j]][tab].push(newData[i][newData[i].keyAt(j)]);
+            if (j === 6) {
+                tabContents[paramsList[j]][tab].push(newData[i]["Engine"]["Horsepower"]);
+            } else {
+                tabContents[paramsList[j]][tab].push(newData[i][dataParamsOrder[j]]);
+            }
         }
     }
 
@@ -134,8 +135,11 @@ export function toggleAlienState(alienVisible, dataLength, container, document) 
 
 export async function showAllCards(loader, tabContents, document, numberOfResultsElement, isMobileScreen, container, clickedTab, tabs, clickedTabString, tabStrings, likedPropertiesList) {
     loader.style.display = "block";
+    console.log(tabContents);
 
     if (tabContents.carTypes.All.length == 0) {
+        console.log("Here i am!!");
+
         const data = await getAllPropertyDetails(loader);
 
         const len = data.length;
@@ -150,23 +154,29 @@ export async function showAllCards(loader, tabContents, document, numberOfResult
             tabContents.indices.All.push(indices[i]);
             indices.splice(i, 1);
         }
+        console.log(tabContents);
 
         tabContents = addNewData(data, document, numberOfResultsElement, container, tabContents, "All");
+
+        console.log(tabContents);
+
     }
 
     container.innerHTML = "";
+    console.log(tabContents.brands.All[tabContents.indices.All[1]]);
+
 
     for (let i = 0; i < tabContents.indices.All.length; i++) {
-        createPropertyCard(
+        createCarCard(
             tabContents.id.All[tabContents.indices.All[i]],
             tabContents.images.All[tabContents.indices.All[i]],
             tabContents.carNames.All[tabContents.indices.All[i]],
             tabContents.prices.All[tabContents.indices.All[i]],
-            tabContents.numberOfSeats.All[tabContents.indices.All[i]],
-            tabContents.carTypes.All[tabContents.indices.All[i]],
             tabContents.brands.All[tabContents.indices.All[i]],
+            tabContents.carTypes.All[tabContents.indices.All[i]],
             tabContents.engineHorsePowers.All[tabContents.indices.All[i]],
             tabContents.mileages.All[tabContents.indices.All[i]],
+            tabContents.numberOfSeats.All[tabContents.indices.All[i]],
             isMobileScreen,
             document,
             container,
@@ -197,6 +207,7 @@ export async function showCards(type, loader, tabContents, document, numberOfRes
     tabContents = addNewData(data, document, numberOfResultsElement, container, tabContents, "Other");
 
     container.innerHTML = "";
+
 
     for (let i = 0; i < tabContents.carNames.Other.length; i++) {
         createCarCard(
@@ -235,16 +246,16 @@ export function showSearchedCards(loader, tabContents, document, numberOfResults
     container.innerHTML = "";
 
     for (let i = 0; i < tabContents.carTypes.Searched.length; i++) {
-        createPropertyCard(
+        createCarCard(
             tabContents.id.Searched[i],
             tabContents.images.Searched[i],
             tabContents.carNames.Searched[i],
             tabContents.prices.Searched[i],
-            tabContents.numberOfSeats.Searched[i],
-            tabContents.carTypes.Searched[i],
             tabContents.brands.Searched[i],
+            tabContents.carTypes.Searched[i],
             tabContents.engineHorsePowers.Searched[i],
             tabContents.mileages.Searched[i],
+            tabContents.numberOfSeats.Searched[i],
             isMobileScreen,
             document,
             container,
@@ -319,8 +330,6 @@ export async function onSearchButtonClicked(loader, input, document, searchedTab
 }
 
 export function addOptions(elementArrays, parentElements, configs, document, appliedFilters) {
-    console.log(JSON.stringify(parentElements));
-
     for (let i = 0; i < elementArrays.length; i++) {
         const elementArray = elementArrays[i];
         const parentElement = parentElements[i];
@@ -329,15 +338,9 @@ export function addOptions(elementArrays, parentElements, configs, document, app
         const colors = [];
         for (let j = 0; j < elementArray.length; j++) {
             if (i === 3) {
-                console.log(j);
-
-                console.log(elementArray[j]);
-
                 colors.push(elementArray[j]);
-
                 if (j === elementArray.length - 1) {
                     const elements = Array.from(new Set(colors.flat()));
-                    console.log(elements);
                     elements.forEach(element => {
                         const option = createElement("p", parentElement, { className: "dropdown-item", textContent: element }, document);
                         option.addEventListener("click", () => {
@@ -447,25 +450,12 @@ export async function applyFilter(loader, appliedFilters, alienVisible, document
         configuration = appliedFilters["Configuration"],
         color = appliedFilters["Color"];
 
-    console.log(clickedTabString === "All" || clickedTabString === "Filtered" ? "All" : clickedTabString),
-        console.log(minPrice),
-        console.log(maxPrice),
-        console.log(minNumberOfSeats),
-        console.log(maxNumberOfSeats),
-        console.log(minMileage),
-        console.log(maxMileage),
-        console.log(minRating),
-        console.log(maxRating),
-        console.log(brand),
-        console.log(configuration),
-        console.log(engineType),
-        console.log(color)
 
+    document.querySelector(".container3").innerHTML = "";
     if (minPrice >= maxPrice || minNumberOfSeats >= maxNumberOfSeats || minRating > maxRating || minMileage > maxMileage) {
         if (alienVisible) {
             alienVisible = false;
         }
-        document.querySelector(".container3").innerHTML = "";
         const parameter = minPrice >= maxPrice ? "Price" : minNumberOfSeats >= maxNumberOfSeats ? "Area" : minRating > maxRating ? "Rating" : minMileage > maxMileage ? "Mileage" : "";
 
         showAlien(`Check your Math Buddy!!<br>Minimum ${parameter} cannot be greater than Maximum ${parameter}!!`, container, document);
@@ -519,16 +509,16 @@ export function showFilteredCards(container, tabContents, isMobileScreen, docume
     container.innerHTML = "";
 
     for (let i = 0; i < tabContents.carTypes.Filtered.length; i++) {
-        createPropertyCard(
+        createCarCard(
             tabContents.id.Filtered[i],
             tabContents.images.Filtered[i],
             tabContents.carNames.Filtered[i],
             tabContents.prices.Filtered[i],
-            tabContents.numberOfSeats.Filtered[i],
-            tabContents.carTypes.Filtered[i],
             tabContents.brands.Filtered[i],
+            tabContents.carTypes.Filtered[i],
             tabContents.engineHorsePowers.Filtered[i],
             tabContents.mileages.Filtered[i],
+            tabContents.numberOfSeats.Filtered[i],
             isMobileScreen,
             document,
             container,

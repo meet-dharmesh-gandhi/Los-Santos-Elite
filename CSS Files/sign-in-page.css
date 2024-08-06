@@ -186,7 +186,20 @@ body {
     }
 }
 
-@media only screen and (max-width: 431px) {
+/*Responsiveness*/
+
+/*Mobile Screens*/
+@media only screen and (max-width: 570px) {
+
+    body {
+        background-color: beige;
+    }
+
+    .box {
+        width: 90%;
+        box-shadow: unset;
+        height: fit-content;
+    }
 
     .content {
         width: 100%;
@@ -195,25 +208,136 @@ body {
         justify-content: start;
         align-items: center;
         padding: 0;
-        margin-top: 40px;
+        margin-top: 15px;
     }
 
     .content h1 {
         text-align: center;
-        font-size: 30px;
-        margin-bottom: 50px;
+        font-size: 35px;
+        margin-bottom: 30px;
     }
 
     .content h2, .content p {
         text-align: center;
-        font-size: 40px;
+        font-size: 35px;
     }
 
     .content p {
-        margin-bottom: 30px;
+        margin-bottom: 10px;
     }
 
     .signIn {
         margin: 0;
+    }
+
+    .image {
+        display: none;
+    }
+
+    .form-control {
+        width: 280px;
+    }
+
+    .signUp {
+        margin: 10px 0px 10px 0px !important;
+    }
+
+    .google {
+        margin: 15px;
+    }
+}
+
+/*Tablet Screens*/
+@media (min-width: 570px) and (max-width: 870px) {
+
+    body {
+        background-color: beige;
+    }
+
+    .box {
+        height: fit-content;
+    }
+
+    .content {
+        width: 100%;
+        height: fit-content;
+        padding: 0px 40px 20px 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    .content h1 {
+        text-align: center;
+        font-size: 45px;
+        margin-bottom: 40px;
+    }
+
+    .content h2, .content p {
+        text-align: center;
+        font-size: 45px;
+    }
+
+    .content p {
+        margin-bottom: 10px;
+    }
+
+    .form-control {
+        width: 350px;   
+    }
+
+    .image {
+        display: none;
+    }
+
+    .signUp {
+        margin: 15px 0px 10px 0px !important;
+    }
+
+    .signIn {
+        margin-bottom: 12px;
+    }
+
+    .google {
+        margin: 5px;
+    }
+}
+
+/*Laptop Screen*/
+@media (min-width: 870px) and (max-width: 1297px) {
+
+    .content {
+        padding: 30px 20px 20px 40px;
+    }
+
+    .content h1 {
+        font-size: 35px;
+        margin-bottom: 40px;
+    }
+
+    .content h2 {
+        font-size: 35px;
+    }
+
+    .content p {
+        font-size: 40px;
+    }
+
+    .signUp {
+        margin-bottom: 5px;
+    }
+
+    .signIn {
+        margin-bottom: 10px;
+    }
+
+    .google {
+        margin: 10px 10px 10px 0px;
+    }
+
+    .image p {
+        text-align: center;
     }
 }

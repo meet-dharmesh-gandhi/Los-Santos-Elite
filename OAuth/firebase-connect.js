@@ -37,6 +37,8 @@ async function updateUserProfile(user, authMethod) {
     throw new Error("Error checking user email");
   };
   const userExistsResponse = await userExists.json();
+  console.log(userExistsResponse);
+
   if (JSON.stringify(userExistsResponse[0]) === "\"true\"" && authMethod === "Sign In") {
     const setUserDetails = await fetch("http://localhost:3000/login", {
       method: "POST",

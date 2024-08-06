@@ -173,3 +173,174 @@ body {
         transform: rotate(-15deg) translateY(0);
     }
 }
+
+/*Responsiveness*/
+
+/*Mobile Screens*/
+@media only screen and (max-width: 570px) {
+
+    body {
+        background-color: beige;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: fit-content;
+        padding: 20px !important;
+    }
+
+    .box {
+        width: 90%;
+        height: fit-content;
+        box-shadow: unset;
+    }
+
+    .content h1 {
+        text-align: center;
+        font-size: 35px;
+        margin-bottom: 30px;
+    }
+
+    .content h2, .content p {
+        text-align: center;
+        font-size: 35px;
+    }
+
+    .content p {
+        margin-bottom: 10px;
+    }
+
+    .signUp {
+        margin: 0px;
+    }
+
+    .image {
+        display: none;
+    }
+
+    .form-control {
+        width: 70vw;
+    }
+
+    .signIn {
+        width: 86%;
+        margin: 10px 0px 10px 0px !important;
+        text-align: start !important;
+    }
+
+    .google {
+        margin: 15px;
+    }
+
+    .image {
+        display: none;
+    }
+}
+
+/*Tablet Screens*/
+@media (min-width: 570px) and (max-width: 870px) {
+
+    body {
+        background-color: beige;
+    }
+
+    .box {
+        width: 90%;
+        height: fit-content;
+        box-shadow: unset;
+    }
+
+    .content {
+        width: 100%;
+        height: fit-content;
+        padding: 0px 40px 20px 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    .content h1 {
+        text-align: center;
+        font-size: 45px;
+        margin-bottom: 40px;
+    }
+
+    .content h2, .content p {
+        text-align: center;
+        font-size: 45px;
+    }
+
+    .content p {
+        margin-bottom: 10px;
+    }
+
+    .form-control {
+        width: 70vw;   
+    }
+
+    .image {
+        display: none;
+    }
+
+    .signUp {
+        margin: 5px 0px 15px 0px !important;
+        width: 150px;
+    }
+
+    .signIn {
+        width: 88%;
+        margin-bottom: 12px;
+        text-align: start !important;
+    }
+
+    .google {
+        margin: 5px;
+    }
+}
+
+/*Laptop Screen*/
+@media (min-width: 870px) and (max-width: 1297px) {
+
+    .content {
+        padding: 30px 20px 20px 40px;
+    }
+
+    .content h1 {
+        font-size: 35px;
+        margin-bottom: 40px;
+    }
+
+    .content h2 {
+        font-size: 35px;
+    }
+
+    .content p {
+        font-size: 40px;
+    }
+
+    .signUp {
+        margin-bottom: 5px;
+    }
+
+    .signIn {
+        margin-bottom: 10px;
+    }
+
+    .google {
+        margin: 10px 10px 10px 0px;
+    }
+
+    .image img {
+        width: 80%;
+    }
+
+    .image p {
+        text-align: center;
+    }
+}

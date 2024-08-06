@@ -63,6 +63,10 @@ body {
   z-index: 0;
 }
 
+.logo p {
+  font-family: "Luxury";
+}
+
 .logo:hover {
   color: orange;
 }

@@ -495,7 +495,7 @@ hr {
     }
 }
 
-@media only screen and (max-width: 431px) {
+@media only screen and (max-width: 500px) {
 
     .carousel-inner img {
         object-fit:cover;
@@ -571,6 +571,10 @@ hr {
         height: 105vh;
     }
 
+    #slider {
+        height: 55vh;
+    }
+
     #slider label {
         margin: 40px auto;
         width: 70%;
@@ -579,5 +583,18 @@ hr {
 
     .text2 {
         font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 985px) {
+    .navbar-collapse {
+        background-color: burlywood;
+    }
+
+    .navbar-nav {
+        padding-left: 15px !important;
+        padding: 3px 0px;
+        flex-direction: row !important;
+        justify-content: space-between;
     }
 }
