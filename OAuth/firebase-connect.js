@@ -4,6 +4,8 @@ import { redirectUser } from "../JS Files/sign-in-page.js";
 
 const urlParams = new URLSearchParams(window.location.search);
 const nextPage = urlParams.get("goto");
+const SERVER_URL = "https://los-santos-elite-1.onrender.com/";
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyDkyVx5KlQU9-ouGQs_38Op4b5G9ilKnOw",
@@ -26,7 +28,7 @@ async function updateUserProfile(user, authMethod) {
   const userName = user.displayName;
   const userEmail = user.email;
   const userProfilePicture = user.photoURL;
-  const userExists = await fetch("http://localhost:3000/user-email-exists", {
+  const userExists = await fetch(`${SERVER_URL}/user-email-exists`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -38,7 +40,7 @@ async function updateUserProfile(user, authMethod) {
   };
   const userExistsResponse = await userExists.json();
   if (JSON.stringify(userExistsResponse[0]) === "\"true\"" && authMethod === "Sign In") {
-    const setUserDetails = await fetch("http://localhost:3000/login", {
+    const setUserDetails = await fetch(`${SERVER_URL}/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -107,7 +109,7 @@ onAuthStateChanged(auth, (user) => {
 
 const addNewUser = async (username, email, password) => {
   try {
-    const response = await fetch("http://localhost:3000/add-new-user", {
+    const response = await fetch(`${SERVER_URL}/add-new-user`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
