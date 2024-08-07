@@ -3,7 +3,7 @@ import { createElement, numberToString } from "./utility-functions.js";
 
 export async function getLikedProperties(userName) {
     try {
-        const likedPropertiesList = await fetch("http://localhost:3000/get-liked-properties", {
+        const likedPropertiesList = await fetch("https://los-santos-elite-2gyo.onrender.com/get-liked-properties", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
