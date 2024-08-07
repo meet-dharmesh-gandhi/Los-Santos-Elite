@@ -219,12 +219,12 @@ export function addNewData(
     const keys = ["_id", "Type", "Name", "Location", "Configuration", "Area", "Builder Name", "Builder Contact Number", "Price", "State", "Images", "Rating", "Luxury Description", "Area Description", "Modern Description", "More Description", "Nothing Description"];
 
     for (let i = 0; i < paramsList.length; i++) {
-        tabContents[paramsList[i]][tab].splice();
+        tabContents[paramsList[i]][tab].splice(0);
     }
 
     for (let i = 0; i < newData.length; i++) {
         for (let j = 0; j < paramsList.length; j++) {
-            tabContents[paramsList[j]][tab].push(newData[i][newData[i].keyAt(j)]);
+            tabContents[paramsList[j]][tab].push(newData[i][newData[i][keys[j]]]);
         }
     }
 
