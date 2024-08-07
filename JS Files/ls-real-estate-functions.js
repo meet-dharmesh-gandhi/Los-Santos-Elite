@@ -217,6 +217,7 @@ export function addNewData(
 
     console.log(tabContents);
     console.log(tabContents[paramsList[1]]);
+    console.log(JSON.stringify(newData));
     console.log(newData[1][newData[1][keys[2]]]);
 
     for (let i = 0; i < paramsList.length; i++) {
