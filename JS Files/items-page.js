@@ -1,9 +1,10 @@
+import { getUserDetails } from "./utility-functions.js"
+
 const urlParams = new URLSearchParams(window.location.search);
 
 let USER_NAME = "";
 let userDetails;
 const serverURL = "https://los-santos-elite-2gyo.onrender.com";
-const token = localStorage.getItem("user details token");
 
 window.addEventListener("scroll", () => {
   const mansionSection = document.querySelector(".mansion");
@@ -16,7 +17,9 @@ window.addEventListener("scroll", () => {
 });
 
 document.addEventListener("DOMContentLoaded", async () => {
-  await getUserDetails();
+  userDetails = await getUserDetails();
+  USER_NAME = userDetails.userName;
+  document.querySelector("#userProfilePicture").src = userDetails.userProfilePicture;
   setAddToCartText();
   if (!urlParams.has("test")) {
     await createWebsite(urlParams.get("name"), urlParams.get("type"));
@@ -24,22 +27,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     await createTestWebsite(urlParams.get("id"));
   }
 });
-
-async function getUserDetails() {
-  try {
-    const getUserDetails = await fetch(serverURL + "/get-user-details", {
-      headers: { "Authorization": `Bearer ${token}` },
-    });
-    if (!getUserDetails.ok) {
-      throw new Error("Error while getting user details");
-    }
-    userDetails = await getUserDetails.json();
-    USER_NAME = userDetails.userName;
-    document.querySelector("#userProfilePicture").src = userDetails.userProfilePicture;
-  } catch (error) {
-    console.error(error);
-  }
-}
 
 const getPropertyDetails = async (name, type) => {
   try {
