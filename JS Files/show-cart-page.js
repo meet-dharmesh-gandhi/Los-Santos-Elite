@@ -1,30 +1,15 @@
+import { getUserDetails } from "./utility-functions.js";
+
 let USER_NAME = "";
 let userDetails;
-const token = localStorage.getItem("user details token");
 const loader = document.querySelector("#loader");
 
 document.addEventListener("DOMContentLoaded", () => {loader.style.display = "none";})
 
-async function getUserDetails() {
-  loader.style.display = "block";
-  try {
-    const getUserDetails = await fetch("http://localhost:3000/get-user-details", {
-      headers: { "Authorization": `Bearer ${token}` },
-    });
-    if (!getUserDetails.ok) {
-      throw new Error("Error while getting user details");
-    }
-    userDetails = await getUserDetails.json();
-    console.log(userDetails);
-    USER_NAME = userDetails.userName;
-    document.querySelector("#userProfilePicture").src = userDetails.userProfilePicture;
-  } catch (error) {
-    console.error(error);
-  }
-  loader.style.display = "none";
-}
-
-await getUserDetails();
+userDetails = await getUserDetails();
+console.log(userDetails);
+USER_NAME = userDetails.userName;
+document.querySelector("#userProfilePicture").src = userDetails.userProfilePicture;
 
 document.onreadystatechange = function() {
   if (document.readyState !== "complete") {
