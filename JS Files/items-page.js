@@ -611,3 +611,7 @@ const setAddToCartText = async () => {
     toastBody.innerText = "Added to cart !";
   }
 };
+
+document.querySelector(".cart").addEventListener("click", () => {
+  window.location.href = "./show-cart-page=js";
+});
