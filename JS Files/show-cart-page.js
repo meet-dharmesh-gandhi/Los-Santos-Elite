@@ -27,7 +27,7 @@ let paymentResult;
 const getCart = async (user) => {
     try {
         loader.style.display = "block";
-        const response = await fetch("http://localhost:3000/show-cart", {
+        const response = await fetch("https://los-santos-elite-2gyo.onrender.com/show-cart", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -48,7 +48,7 @@ const updateTransactionHistory = async (amounts, quantities) => {
   const date = new Date();
   const fullDate = date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear();
   try {
-    const response = await fetch ("http://localhost:3000/update-transaction-history", {
+    const response = await fetch ("https://los-santos-elite-2gyo.onrender.com/update-transaction-history", {
     method: "POST",
     headers: {
         "Content-Type": "application/json",
@@ -64,7 +64,7 @@ const updateTransactionHistory = async (amounts, quantities) => {
 const deleteCart = async () => {
     loader.style.display = "block";
     try {
-        const response = await fetch("http://localhost:3000/delete-cart", {
+        const response = await fetch("https://los-santos-elite-2gyo.onrender.com/delete-cart", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -80,7 +80,7 @@ const deleteCart = async () => {
 const getListOfPrices = async (listOfPrices) => {
   loader.style.display = "block";
   try {
-    const response = await fetch("http://localhost:3000/get-list-of-prices", {
+    const response = await fetch("https://los-santos-elite-2gyo.onrender.com/get-list-of-prices", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -130,7 +130,7 @@ checkoutButton.addEventListener("click", () => {
   );
   console.log(reply);
   if (reply) {
-    window.location.href = `http://localhost:3000/pay/${Math.ceil(1.11 * totalPrice)}`;
+    window.location.href = `https://los-santos-elite-2gyo.onrender.com/pay/${Math.ceil(1.11 * totalPrice)}`;
   }
 });
 
@@ -231,7 +231,7 @@ const getUserCart = async () => {
   loader.style.display = "block";
   console.log(USER_NAME);
   try {
-    const response = await fetch("http://localhost:3000/show-cart", {
+    const response = await fetch("https://los-santos-elite-2gyo.onrender.com/show-cart", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -257,7 +257,7 @@ const getCartPrices = async () => {
     });
   }
   try {
-    const response = await fetch("http://localhost:3000/get-specifics", {
+    const response = await fetch("https://los-santos-elite-2gyo.onrender.com/get-specifics", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -290,7 +290,7 @@ const inArray = (item, array) => {
 const getElementDetails = async (propertyNames) => {
   loader.style.display = "block";
   try {
-    const response = await fetch("http://localhost:3000/get-specifics", {
+    const response = await fetch("https://los-santos-elite-2gyo.onrender.com/get-specifics", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -366,7 +366,7 @@ function createItemCard(
 const removeFromCart = async (name) => {
   loader.style.display = "block";
   try {
-    const response = await fetch("http://localhost:3000/remove-from-cart", {
+    const response = await fetch("https://los-santos-elite-2gyo.onrender.com/remove-from-cart", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
