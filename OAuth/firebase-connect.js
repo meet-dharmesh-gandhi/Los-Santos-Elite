@@ -4,6 +4,7 @@ import { redirectUser } from "../JS Files/sign-in-page.js";
 
 const urlParams = new URLSearchParams(window.location.search);
 const nextPage = urlParams.get("goto");
+const serverURL = "https://los-santos-elite-2gyo.onrender.com";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDkyVx5KlQU9-ouGQs_38Op4b5G9ilKnOw",
@@ -26,7 +27,7 @@ async function updateUserProfile(user, authMethod) {
   const userName = user.displayName;
   const userEmail = user.email;
   const userProfilePicture = user.photoURL;
-  const userExists = await fetch("https://los-santos-elite-render-test.onrender.com/user-email-exists", {
+  const userExists = await fetch(serverURL + "/user-email-exists", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -38,7 +39,7 @@ async function updateUserProfile(user, authMethod) {
   };
   const userExistsResponse = await userExists.json();
   if (JSON.stringify(userExistsResponse[0]) === "\"true\"" && authMethod === "Sign In") {
-    const setUserDetails = await fetch("https://los-santos-elite-render-test.onrender.com/login", {
+    const setUserDetails = await fetch(serverURL + "/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -107,7 +108,7 @@ onAuthStateChanged(auth, (user) => {
 
 const addNewUser = async (username, email, password) => {
   try {
-    const response = await fetch("https://los-santos-elite-render-test.onrender.com/add-new-user", {
+    const response = await fetch(serverURL + "/add-new-user", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
