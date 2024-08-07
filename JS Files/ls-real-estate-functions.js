@@ -226,7 +226,7 @@ export function addNewData(
 
     for (let i = 0; i < newData.length; i++) {
         for (let j = 0; j < paramsList.length; j++) {
-            tabContents[paramsList[j]][tab].push(newData[i][newData[i][keys[j]]]);
+            tabContents[paramsList[j]][tab].push(newData[i][keys[j]]);
         }
     }
 
