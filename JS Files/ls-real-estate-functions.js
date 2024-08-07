@@ -312,7 +312,7 @@ export async function showCards(type, loader, tabContents, document, numberOfRes
 
     const data = await getPropertyDetails(type, loader);
 
-    tabContents = addNewData(data, document, numberOfResultsElement, container, tabContents, tabs[index]);
+    tabContents = addNewData(data, document, numberOfResultsElement, container, tabContents, "Other");
 
     container.innerHTML = "";
 
