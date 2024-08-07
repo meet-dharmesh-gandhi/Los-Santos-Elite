@@ -1243,7 +1243,7 @@ app.get("/pay/:amount", async (req, res) => {
 		merchantUserId: "MUID" + userId,
 		name: "meet",
 		amount,
-		redirectUrl: `https://los-santos-elite-9xdq.onrender.com//redirect-url/${merchantTransactionId}`,
+		redirectUrl: `https://los-santos-elite-9xdq.onrender.com/redirect-url/${merchantTransactionId}`,
 		redirectMode: "POST",
 		mobileNumber: "9999999999",
 		paymentInstrument: { type: "PAY_PAGE" },
@@ -1296,16 +1296,16 @@ app.get("/redirect-url/:merchantTransactionId", (req, res) => {
 				if (response.data.code === "PAYMENT_SUCCESS") {
 					// go to success frontend
 					PAYMENT_DATA.push(response.data);
-					res.redirect(`https://los-santos-elite-9xdq.onrender.com/show%20cart.html?result=success&i=${PAYMENT_DATA.indexOf(response.data)}`);
+					res.redirect(`https://los-santos-elite-9xdq.onrender.com/HTML Files/show%20cart.html?result=success&i=${PAYMENT_DATA.indexOf(response.data)}`);
 				} else if (response.data.code === "PAYMENT_ERROR") {
 					// go to error frontend
-					res.redirect(`https://los-santos-elite-9xdq.onrender.com/show%20cart.html?result=failure&i=-1`);
+					res.redirect(`https://los-santos-elite-9xdq.onrender.com/HTML Files/show%20cart.html?result=failure&i=-1`);
 				} else if (response.data.code === "INTERNAL_SERVER_ERROR") {
 					// go to server error frontend
-					res.redirect(`https://los-santos-elite-9xdq.onrender.com/show%20cart.html?result=internal-error&i=-1`);
+					res.redirect(`https://los-santos-elite-9xdq.onrender.com/HTML Files/show%20cart.html?result=internal-error&i=-1`);
 				} else {
 					// go to loading frontend
-					res.redirect(`https://los-santos-elite-9xdq.onrender.com/show%20cart.html?result=loading&i=-1`);
+					res.redirect(`https://los-santos-elite-9xdq.onrender.com/HTML Files/show%20cart.html?result=loading&i=-1`);
 				}
 			})
 			.catch(function (error) {
@@ -1326,7 +1326,7 @@ app.get("/pay-premium/:amount", async (req, res) => {
 		merchantTransactionId: merchantTransactionId,
 		merchantUserId: userId,
 		amount,
-		redirectUrl: `https://los-santos-elite-9xdq.onrender.com/premium-redirect-url/${merchantTransactionId}/${amount}`,
+		redirectUrl: `https://los-santos-elite-9xdq.onrender.com/HTML Files/premium-redirect-url/${merchantTransactionId}/${amount}`,
 		redirectMode: "REDIRECT",
 		mobileNumber: "9999999999",
 		paymentInstrument: { type: "PAY_PAGE" },
@@ -1379,9 +1379,9 @@ app.get("/premium-redirect-url/:merchantTransactionId/:amount", (req, res) => {
 			.request(options)
 			.then(function (response) {
 				if (response.data.code === "PAYMENT_SUCCESS") {
-					res.redirect(`https://los-santos-elite-9xdq.onrender.com/plan-selection-page.html?status=Payment%20Successful%20${amount}`);
+					res.redirect(`https://los-santos-elite-9xdq.onrender.com/HTML Files/plan-selection-page.html?status=Payment%20Successful%20${amount}`);
 				} else {
-					res.redirect(`https://los-santos-elite-9xdq.onrender.com/plan-selection-page.html?status=Payment%20Failed%20${amount}`);
+					res.redirect(`https://los-santos-elite-9xdq.onrender.com/HTML Files/plan-selection-page.html?status=Payment%20Failed%20${amount}`);
 				}
 			})
 			.catch(function (error) {
