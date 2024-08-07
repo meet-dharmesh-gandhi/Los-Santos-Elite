@@ -75,6 +75,14 @@ body {
   display: none;
 }
 
+.cars-navbar li {
+  padding: 10px;
+  margin-right: 20px;
+  list-style-type: none;
+  position: relative;
+  font-family: "Rubik", sans-serif;
+}
+
 .bg-image {
   height: 100vh;
   width: 99vw !important;
@@ -84,11 +92,11 @@ body {
 }
 
 .bg-image1 {
-  background-image: url("../Other Media/images/mansion4.jpg");
+  background-image: url("../Other Media/images/supercar1.webp");
 }
 
 .bg-image2 {
-  background-image: url("../Other Media/images/mansion.jpg");
+  background-image: url("../Other Media/images/supercar3.avif");
 }
 
 .bg-image2 h1 {
@@ -100,7 +108,7 @@ body {
 }
 
 .bg-image3 {
-  background-image: url("../Other Media/images/penthouse3.jpg");
+  background-image: url("../Other Media/images/luxurycar1.jpg");
   object-fit: cover !important;
 }
 
@@ -216,7 +224,7 @@ body {
 }
 
 .specialDeals {
-  height: 110vh;
+  height: 700px;
   background-color: #fbe9d0;
   text-align: center;
   display: flex;
@@ -224,7 +232,7 @@ body {
 }
 
 .top {
-  padding: 140px 0px 20px 80px;
+  padding: 60px 0px 20px 80px;
   font-family: "Rubik", sans-serif;
   color: navy;
 }
@@ -422,7 +430,7 @@ body {
   color: red;
 }
 
-.mansion {
+.cars {
   padding: 10px 20px;
   border-radius: 15px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -468,7 +476,7 @@ body {
   margin-bottom: 70px;
   border-radius: 15px;
   width: 410px !important;
-  height: 620px;
+  height: 670px !important;
   margin-right: 30px;
   overflow: hidden;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
@@ -554,13 +562,13 @@ body {
   transform: scale(1.1);
 }
 
-.mansion {
+.cars {
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.mansion.visible {
+.cars.visible {
   opacity: 1;
   transform: translateY(0);
 }
@@ -1298,6 +1306,19 @@ legend {
   height: 160px !important;
 }
 
+#id0 img {
+  height: 113%;
+  width: 110%;
+}
+
+#id2 {
+  border: none;
+}
+
+.circle {
+  background-color: aliceblue !important;
+}
+
 @keyframes slide {
   from {
     transform: translateX(0);
@@ -1478,7 +1499,7 @@ legend {
     margin-bottom: 0px !important;
   }
 
-  .cars-container-navbar {
+  .cars-navbar {
     overflow-x: scroll !important;
     scrollbar-width: none;
   }
@@ -1515,7 +1536,7 @@ legend {
     margin-top: 30px;
   }
 
-  .mansion.visible {
+  .cars .visible {
     height: fit-content;
   }
 
@@ -1714,5 +1735,192 @@ legend {
 
   .navbar.fixed {
     top: -10px;
+  }
+}
+
+/*Tablet Screens*/
+@media (min-width: 431px) and (max-width: 854px) {
+  .navbar {
+    top: -300px;
+    background-color: black;
+    height: fit-content !important;
+  }
+
+  .navbar.fixed {
+    top: -10px;
+  }
+
+  .navbar-nav {
+    display: flex !important;
+    flex-direction: row !important;
+    padding-left: 0 !important;
+    margin-bottom: 0 !important;
+    list-style: none;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 5px;
+  }
+
+  .header h1 {
+    line-height: 55px;
+  }
+
+  .bg-image3 h1 {
+    left: 43%;
+    right: 10%;
+  }
+
+  .search-area {
+    height: fit-content;
+  }
+
+  .topAreas {
+    padding-bottom: 30px;
+  }
+
+  .specialDeals {
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .top {
+    padding: 50px 0px 30px 0px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .carousel-item img {
+    padding: 20px;
+    width: 100%;
+    margin-left: 0px;
+  }
+  .nav {
+    overflow-x: scroll;
+    flex-wrap: nowrap !important;
+    scrollbar-width: none;
+  }
+
+  .nav button {
+    font-size: 20px;
+  }
+
+  .filterLogo {
+    top: 1%;
+  }
+
+  .fa-circle-chevron-left, .fa-circle-chevron-right {
+    display: none !important;
+  }
+
+  .cars {
+    height: fit-content !important;
+  }
+
+  .container3 {
+    padding-top: 20px;
+  }
+
+  .divertToCars {
+    padding: 0px;
+  }
+
+  .content2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content2 h2, .content2 h3, .content2 h4, .content2 button {
+    margin: 15px 0px;
+    text-align: center;
+  }
+
+  .content2 h2 {
+    width: 90%;
+  }
+
+  .content2 button {
+    width: 70%;
+  }
+}
+
+/*Laptop Screens*/
+@media (min-width: 854px) and (max-width: 1440px) {
+  .header h1 {
+    line-height: 50px;
+  }
+
+  .logo {
+    font-size: 22px;
+    left: 50px;
+  }
+
+  .search-area {
+    height: fit-content;
+  }
+
+  .specialDeals {
+    display: flex;
+    justify-items: center;
+    align-content: center;
+    height: fit-content;
+    height: 650px;
+  }
+
+  .carousel-item {
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .carousel-item img {
+    width: 90%;
+    padding: 0px 0px 0px 0px;
+    margin-left: 0px;
+  }
+
+  .top {
+    padding: 25px 0px 20px 40px;
+  }
+
+  .cars {
+    height: fit-content !important;
+  }
+
+  .filterLogo {
+    height: 60px;
+    width: 60px;
+  }
+
+  .alien-container {
+    position: unset;
+    width: 100%;
+    height: 80vh;
+  }
+
+  .alien {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+  }
+
+  .alien-img {
+    width: 320px;
+  }
+
+  .divertToCars h2 {
+    font-size: 2.5rem;
+  }
+
+  .divertToCars h3 {
+    font-size: 1.5rem;
+  }
+
+  .divertToCars h4 {
+    font-size: 1.2rem;
   }
 }
