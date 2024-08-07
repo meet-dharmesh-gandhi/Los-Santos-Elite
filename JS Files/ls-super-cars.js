@@ -80,7 +80,7 @@ allFunctions.clickToGoTo(".bg-image3 h1", "#penthouse-tab");	// click on the man
 
 // all the intervals
 
-setInterval(() => { isMobileScreen = checkScreenSize(isMobileScreen, clickedTab, window); console.log(isMobileScreen); }, 1000);
+setInterval(() => { isMobileScreen = checkScreenSize(isMobileScreen, clickedTab, window); }, 1000);
 
 const typeUserNameFunction = setInterval(() => { typeDetailsList = allFunctions.typeUserName([".bg-image1", ".bg-image2", ".bg-image3"], document, [1, 1, 1 / 3], window, userDetails.userName, userName, typeDetailsList[0], typeUserNameFunction, userDetails.userName.length, typeDetailsList[1]) }, 200);
 
