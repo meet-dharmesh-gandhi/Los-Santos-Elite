@@ -24,6 +24,7 @@ const setUserDetails = (userDetails) => {
 
 userDetails = await getUserDetails();
 username = userDetails.userName;
+setUserDetails(userDetails);
 
 let inputBoxes = document.querySelectorAll(".inputBox");
 console.log(inputBoxes);
