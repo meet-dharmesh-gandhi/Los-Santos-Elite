@@ -124,6 +124,10 @@ signOutButton.addEventListener("click", (event) => {
 	redirectTo("../HTML Files/landing-page.html");
 });
 
+document.querySelector(".visit-ls-real-estate").addEventListener("click", () => {
+	window.location.href = "./ls-real-estate.html";
+})
+
 
 
 clickedTab.click();
