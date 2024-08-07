@@ -1,6 +1,7 @@
 const urlParams = new URLSearchParams(window.location.search);
 const nextPage = urlParams.get("goto");
 
+const serverURL = "https://los-santos-elite-2gyo.onrender.com";
 
 let animationEnd = document.querySelector(".image img");
 animationEnd.addEventListener("animationend", () => {
@@ -37,7 +38,7 @@ if (signUpButon !== null) {
 
 const addNewUser = async (username, password) => {
   try {
-    const response = await fetch("http://localhost:3000/add-new-user", {
+    const response = await fetch(serverURL + "/add-new-user", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
