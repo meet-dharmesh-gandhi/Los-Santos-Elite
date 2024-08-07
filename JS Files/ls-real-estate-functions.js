@@ -215,7 +215,7 @@ export function addNewData(
 
     console.log(tabContents);
     console.log(tabContents[paramsList[1]]);
-    console.log(newData[i][newData[i][keys[j]]]);
+    console.log(newData[1][newData[1][keys[2]]]);
 
     const keys = ["_id", "Type", "Name", "Location", "Configuration", "Area", "Builder Name", "Builder Contact Number", "Price", "State", "Images", "Rating", "Luxury Description", "Area Description", "Modern Description", "More Description", "Nothing Description"];
 
