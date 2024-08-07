@@ -135,11 +135,8 @@ export function toggleAlienState(alienVisible, dataLength, container, document) 
 
 export async function showAllCards(loader, tabContents, document, numberOfResultsElement, isMobileScreen, container, clickedTab, tabs, clickedTabString, tabStrings, likedPropertiesList) {
     loader.style.display = "block";
-    console.log(tabContents);
 
     if (tabContents.carTypes.All.length == 0) {
-        console.log("Here i am!!");
-
         const data = await getAllPropertyDetails(loader);
 
         const len = data.length;
@@ -154,17 +151,11 @@ export async function showAllCards(loader, tabContents, document, numberOfResult
             tabContents.indices.All.push(indices[i]);
             indices.splice(i, 1);
         }
-        console.log(tabContents);
 
         tabContents = addNewData(data, document, numberOfResultsElement, container, tabContents, "All");
-
-        console.log(tabContents);
-
     }
 
     container.innerHTML = "";
-    console.log(tabContents.brands.All[tabContents.indices.All[1]]);
-
 
     for (let i = 0; i < tabContents.indices.All.length; i++) {
         createCarCard(
@@ -201,8 +192,6 @@ export async function showCards(type, loader, tabContents, document, numberOfRes
     load(loader);
 
     const data = await getPropertyDetails(type, loader);
-    console.log(tabs);
-
 
     tabContents = addNewData(data, document, numberOfResultsElement, container, tabContents, "Other");
 
