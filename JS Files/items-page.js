@@ -2,6 +2,7 @@ const urlParams = new URLSearchParams(window.location.search);
 
 let USER_NAME = "";
 let userDetails;
+const serverURL = "https://los-santos-elite-2gyo.onrender.com";
 const token = localStorage.getItem("user details token");
 
 window.addEventListener("scroll", () => {
@@ -26,7 +27,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 async function getUserDetails() {
   try {
-    const getUserDetails = await fetch("http://localhost:3000/get-user-details", {
+    const getUserDetails = await fetch(serverURL + "/get-user-details", {
       headers: { "Authorization": `Bearer ${token}` },
     });
     if (!getUserDetails.ok) {
@@ -42,7 +43,7 @@ async function getUserDetails() {
 
 const getPropertyDetails = async (name, type) => {
   try {
-    const response = await fetch("http://localhost:3000/get-specifics", {
+    const response = await fetch(serverURL + "/get-specifics", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -63,7 +64,7 @@ const getPropertyDetails = async (name, type) => {
 
 const getTestDetails = async (id) => {
   try {
-    const response = await fetch("http://localhost:3000/get-saved-details", {
+    const response = await fetch(serverURL + "/get-saved-details", {
       method: "POST",
       headers: {
         "Content-Type" : "application/json",
@@ -79,7 +80,7 @@ const getTestDetails = async (id) => {
 
 const getUserProfile = async (username) => {
   try {
-    const response = await fetch("http://localhost:3000/get-user-profile", {
+    const response = await fetch(serverURL + "/get-user-profile", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -98,7 +99,7 @@ const getUserProfile = async (username) => {
 
 const setBuilderRating = async (rating, builderName) => {
   try {
-    const response = await fetch("http://localhost:3000/set-builder-rating", {
+    const response = await fetch(serverURL + "/set-builder-rating", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -355,7 +356,7 @@ const createWebsite = async (name, type) => {
   const getOnlyPropertyDetails = async (builderName) => {
     try {
       const response = await fetch(
-        "http://localhost:3000/get-property-details",
+        serverURL + "/get-property-details",
         {
           method: "POST",
           headers: {
@@ -400,7 +401,7 @@ const createWebsite = async (name, type) => {
       addtocart.innerText = "Add to Cart";
       toastBody.innerText = "Removed from cart";
       try {
-        const response = await fetch("http://localhost:3000/remove-from-cart", {
+        const response = await fetch(serverURL + "/remove-from-cart", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -422,7 +423,7 @@ const createWebsite = async (name, type) => {
       addtocart.innerText = "Added !";
       toastBody.innerText = "Added to cart !";
       try {
-        const response = await fetch("http://localhost:3000/add-to-cart", {
+        const response = await fetch(serverURL + "/add-to-cart", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -588,7 +589,7 @@ function showCart() {
 
 const getCart = async (user) => {
   try {
-    const response = await fetch("http://localhost:3000/show-cart", {
+    const response = await fetch(serverURL + "/show-cart", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
