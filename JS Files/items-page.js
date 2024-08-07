@@ -612,6 +612,6 @@ const setAddToCartText = async () => {
   }
 };
 
-document.querySelector(".cart").addEventListener("click", () => {
-  window.location.href = "./show-cart-page=js";
+document.querySelector(".shopping-cart").addEventListener("click", () => {
+  window.location.href = "./show-cart-page.js";
 });
