@@ -1243,7 +1243,7 @@ app.get("/pay/:amount", async (req, res) => {
 		merchantUserId: "MUID" + userId,
 		name: "meet",
 		amount,
-		redirectUrl: `http://localhost:${port}/redirect-url/${merchantTransactionId}`,
+		redirectUrl: `../HTML Files/redirect-url/${merchantTransactionId}`,
 		redirectMode: "POST",
 		mobileNumber: "9999999999",
 		paymentInstrument: { type: "PAY_PAGE" },
@@ -1296,16 +1296,16 @@ app.get("/redirect-url/:merchantTransactionId", (req, res) => {
 				if (response.data.code === "PAYMENT_SUCCESS") {
 					// go to success frontend
 					PAYMENT_DATA.push(response.data);
-					res.redirect(`http://127.0.0.1:${clientPort}/show%20cart.html?result=success&i=${PAYMENT_DATA.indexOf(response.data)}`);
+					res.redirect(`../HTML Files/show%20cart.html?result=success&i=${PAYMENT_DATA.indexOf(response.data)}`);
 				} else if (response.data.code === "PAYMENT_ERROR") {
 					// go to error frontend
-					res.redirect(`http://127.0.0.1:${clientPort}/show%20cart.html?result=failure&i=-1`);
+					res.redirect(`../HTML Files/show%20cart.html?result=failure&i=-1`);
 				} else if (response.data.code === "INTERNAL_SERVER_ERROR") {
 					// go to server error frontend
-					res.redirect(`http://127.0.0.1:${clientPort}/show%20cart.html?result=internal-error&i=-1`);
+					res.redirect(`../HTML Files/show%20cart.html?result=internal-error&i=-1`);
 				} else {
 					// go to loading frontend
-					res.redirect(`http://127.0.0.1:${clientPort}/show%20cart.html?result=loading&i=-1`);
+					res.redirect(`../HTML Files/show%20cart.html?result=loading&i=-1`);
 				}
 			})
 			.catch(function (error) {
@@ -1326,7 +1326,7 @@ app.get("/pay-premium/:amount", async (req, res) => {
 		merchantTransactionId: merchantTransactionId,
 		merchantUserId: userId,
 		amount,
-		redirectUrl: `http://localhost:${port}/premium-redirect-url/${merchantTransactionId}/${amount}`,
+		redirectUrl: `../HTML Files/premium-redirect-url/${merchantTransactionId}/${amount}`,
 		redirectMode: "REDIRECT",
 		mobileNumber: "9999999999",
 		paymentInstrument: { type: "PAY_PAGE" },
@@ -1379,9 +1379,9 @@ app.get("/premium-redirect-url/:merchantTransactionId/:amount", (req, res) => {
 			.request(options)
 			.then(function (response) {
 				if (response.data.code === "PAYMENT_SUCCESS") {
-					res.redirect(`http://127.0.0.1:5500/HTML Files/plan-selection-page.html?status=Payment%20Successful%20${amount}`);
+					res.redirect(`../HTML Files/plan-selection-page.html?status=Payment%20Successful%20${amount}`);
 				} else {
-					res.redirect(`http://127.0.0.1:5500/HTML Files/plan-selection-page.html?status=Payment%20Failed%20${amount}`);
+					res.redirect(`../HTML Files/plan-selection-page.html?status=Payment%20Failed%20${amount}`);
 				}
 			})
 			.catch(function (error) {
