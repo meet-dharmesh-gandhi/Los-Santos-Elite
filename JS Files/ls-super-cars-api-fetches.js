@@ -1,6 +1,6 @@
 import { getElement } from "./utility-functions.js";
 
-const SERVER_HOST_URL = "http://localhost:3000";
+const SERVER_HOST_URL = "https://los-santos-elite-2gyo.onrender.com";
 const apiEndPoints = [
     "get-extreme-car-values",
     "get-unique-car-values",
