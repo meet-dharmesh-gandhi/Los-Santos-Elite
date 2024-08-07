@@ -124,6 +124,10 @@ signOutButton.addEventListener("click", (event) => {
 	redirectTo("../HTML Files/landing-page.html");
 });
 
+document.querySelector(".visit-ls-super-cars").addEventListener("click", () => {
+	window.location.href = "./ls-super-cars.html";
+})
+
 
 
 clickedTab.click();
