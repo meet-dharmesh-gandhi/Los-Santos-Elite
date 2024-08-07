@@ -30,7 +30,7 @@ const testProperties = {};
 
 const secretKey = process.env.SESSION_SECRET_KEY;
 
-const allowedOrigins = ['http://127.0.0.1:5500', "https://los-santos-elite-render-test-1.onrender.com"];
+const allowedOrigins = ['http://127.0.0.1:5500', "https://los-santos-elite-render-test-1.onrender.com", "https://los-santos-elite-2gyo.onrender.com"];
 
 const corsOptions = {
 	origin: function (origin, callback) {
