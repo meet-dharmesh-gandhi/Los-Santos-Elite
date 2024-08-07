@@ -216,6 +216,7 @@ export function addNewData(
     const keys = ["_id", "Type", "Name", "Location", "Configuration", "Area", "Builder Name", "Builder Contact Number", "Price", "State", "Images", "Rating", "Luxury Description", "Area Description", "Modern Description", "More Description", "Nothing Description"];
 
     console.log(tabContents);
+    console.log(tab);
     console.log(tabContents[paramsList[1]][tab]);
     console.log(JSON.stringify(newData));
     console.log(newData[1][keys[2]]);
