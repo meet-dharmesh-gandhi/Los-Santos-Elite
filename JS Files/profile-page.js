@@ -22,7 +22,8 @@ const setUserDetails = (userDetails) => {
 	document.querySelector("#userProfilePicture").src = userDetails.userProfilePicture;
 }
 
-await getUserDetails();
+userDetails = await getUserDetails();
+username = userDetails.userName;
 
 let inputBoxes = document.querySelectorAll(".inputBox");
 console.log(inputBoxes);
