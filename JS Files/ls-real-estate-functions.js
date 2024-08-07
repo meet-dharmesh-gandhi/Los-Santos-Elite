@@ -1,10 +1,7 @@
-// pending tasks:
-// 1. show liked properties with a fa-solid heart
-// 2. stop anyone from accessing any of the web pages from in-between, redirect to sign in page if status is 403
-// 3. link the profile page
-
 import { addLeftArrowIcon, addRightArrowIcon, createPropertyCard } from "./property-card-functions.js";
 import { createElement, getElement, getRandomNumber, getSibling, load, redirectTo, unLoad } from "./utility-functions.js";
+
+const serverURL = "https://los-santos-elite-2gyo.onrender.com";
 
 export function toggleLikeState(likeButtonText, propertyName) {
     if (likeButtonText.classList.contains("fa-regular")) {
@@ -22,7 +19,7 @@ export function toggleLikeState(likeButtonText, propertyName) {
 export async function addToWishlist(propertyName) {
     try {
         const userName = document.getElementById("user-name");
-        const response = await fetch("http://localhost:3000/add-to-wishlist", {
+        const response = await fetch(serverURL + "/add-to-wishlist", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -39,7 +36,7 @@ export async function addToWishlist(propertyName) {
 export async function removeFromWishlist(propertyName) {
     try {
         const userName = document.getElementById("user-name");
-        const response = await fetch("http://localhost:3000/remove-from-wishlist", {
+        const response = await fetch(serverURL + "/remove-from-wishlist", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -108,7 +105,7 @@ export function onScreenScroll(navbar, navbar2, logo, heights, multipliers, wind
 export async function getAllPropertyDetails(loader) {
     loader.style.display = "block";
     try {
-        const response = await fetch("http://localhost:3000/get-property-details", {
+        const response = await fetch(serverURL + "/get-property-details", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -130,7 +127,7 @@ export async function getAllPropertyDetails(loader) {
 export async function getPropertyDetails(propertyType, loader) {
     loader.style.display = "block";
     try {
-        const response = await fetch("http://localhost:3000/get-property-details", {
+        const response = await fetch(serverURL + "/get-property-details", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -164,7 +161,7 @@ export async function filterProperties(
     location,
 ) {
     try {
-        const response = await fetch("http://localhost:3000/filter-properties", {
+        const response = await fetch(serverURL + "/filter-properties", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -385,7 +382,7 @@ export function showSearchedCards(loader, tabContents, document, numberOfResults
 
 export async function getSearchedProperties(Searched) {
     try {
-        const response = await fetch("http://localhost:3000/search", {
+        const response = await fetch(serverURL + "/search", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -466,7 +463,7 @@ export function addOptions(elementArrays, parentElements, configs, document, app
 
 export async function getAttributes(attributes) {
     try {
-        const result = await fetch("http://localhost:3000/get-unique-values", {
+        const result = await fetch(serverURL + "/get-unique-values", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -656,7 +653,7 @@ export function showFilteredCards(container, tabContents, isMobileScreen, docume
 };
 
 export async function setExtremeValues(minPriceInput, maxPriceInput, minAreaInput, maxAreaInput, document) {
-    const values = await fetch("http://localhost:3000/get-extreme-values");
+    const values = await fetch(serverURL + "/get-extreme-values");
     const extremeValues = await values.json();
     getElement(minPriceInput, document).textContent = extremeValues[0].minPrice;
     getElement(maxPriceInput, document).textContent = extremeValues[0].maxPrice;
