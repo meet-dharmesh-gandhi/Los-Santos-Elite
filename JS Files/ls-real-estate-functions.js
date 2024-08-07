@@ -213,6 +213,9 @@ export function addNewData(
 
     container.innerHTML = "";
 
+    console.log(tabContents);
+    console.log(tabContents[paramsList[1]]);
+
     const keys = ["_id", "Type", "Name", "Location", "Configuration", "Area", "Builder Name", "Builder Contact Number", "Price", "State", "Images", "Rating", "Luxury Description", "Area Description", "Modern Description", "More Description", "Nothing Description"];
 
     for (let i = 0; i < paramsList.length; i++) {
