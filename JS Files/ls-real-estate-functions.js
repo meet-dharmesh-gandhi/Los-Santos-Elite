@@ -212,12 +212,12 @@ export function addNewData(
     const paramsList = ["id", "propertyTypes", "propertyNames", "locations", "configurations", "areas", "builderNames", "builderContactNumber", "prices", "states", "images"];
 
     container.innerHTML = "";
+    
+    const keys = ["_id", "Type", "Name", "Location", "Configuration", "Area", "Builder Name", "Builder Contact Number", "Price", "State", "Images", "Rating", "Luxury Description", "Area Description", "Modern Description", "More Description", "Nothing Description"];
 
     console.log(tabContents);
     console.log(tabContents[paramsList[1]]);
     console.log(newData[1][newData[1][keys[2]]]);
-
-    const keys = ["_id", "Type", "Name", "Location", "Configuration", "Area", "Builder Name", "Builder Contact Number", "Price", "State", "Images", "Rating", "Luxury Description", "Area Description", "Modern Description", "More Description", "Nothing Description"];
 
     for (let i = 0; i < paramsList.length; i++) {
         tabContents[paramsList[i]][tab].splice(0);
