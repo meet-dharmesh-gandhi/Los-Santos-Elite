@@ -1,3 +1,5 @@
+import { getUserDetails } from "./utility-functions.js";
+
 let USER_NAME = "";
 
 const displayUserDetails = (userDetails) => {
@@ -6,20 +8,8 @@ const displayUserDetails = (userDetails) => {
     USER_NAME = userDetails.userName;
 }
 
-let userDetails;
-const token = localStorage.getItem("user details token");
-try {
-    const getUserDetails = await fetch("http://localhost:3000/get-user-details", {
-        headers: { "Authorization": `Bearer ${token}` },
-    });
-    if (!getUserDetails.ok) {
-        throw new Error("Error while getting user details");
-    }
-    userDetails = await getUserDetails.json();
-    displayUserDetails(userDetails);
-} catch (error) {
-    console.error(error);
-}
+let userDetails = await getUserDetails();
+displayUserDetails(userDetails);
 
 let details = {
     "_id": -1,
@@ -65,7 +55,7 @@ let checkDetailsChange = { ...details };
 
 const checkSeller = async () => {
     const username = USER_NAME;
-    const seller = await fetch("http://localhost:3000/check-if-seller", {
+    const seller = await fetch("https://los-santos-elite-2gyo.onrender.com/check-if-seller", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -78,7 +68,7 @@ const checkSeller = async () => {
 }
 
 const getSellerPremiumType = async () => {
-    const response = await fetch("http://localhost:3000/get-seller-premium-type", {
+    const response = await fetch("https://los-santos-elite-2gyo.onrender.com/get-seller-premium-type", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -92,7 +82,7 @@ const getSellerPremiumType = async () => {
 
 const getUniqueID = async () => {
     try {
-        const response = await fetch("http://localhost:3000/get-unique-id", {
+        const response = await fetch("https://los-santos-elite-2gyo.onrender.com/get-unique-id", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -115,7 +105,7 @@ const saveTestDetails = async (details) => {
         await getUniqueID();
     }
     try {
-        const response = await fetch("http://localhost:3000/save-test-details", {
+        const response = await fetch("https://los-santos-elite-2gyo.onrender.com/save-test-details", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -130,7 +120,7 @@ const saveTestDetails = async (details) => {
 
 const generateDescriptions = async () => {
     try {
-        const response = await fetch("http://localhost:3000/get-descriptions");
+        const response = await fetch("https://los-santos-elite-2gyo.onrender.com/get-descriptions");
         if (!response.ok) {
             throw new Error("Something went wrong while getting descriptions!!");
         }
@@ -197,7 +187,7 @@ const displayDescriptions = async () => {
 
 const displayCategories = async () => {
     try {
-        const response = await fetch("http://localhost:3000/get-categories");
+        const response = await fetch("https://los-santos-elite-2gyo.onrender.com/get-categories");
         const data = await response.json();
         const propertyCategoryList = document.querySelector(".propertyCategoryList");
         data.forEach((category) => {
@@ -221,7 +211,7 @@ const displayCategories = async () => {
 
 const displayStates = async () => {
     try {
-        const response = await fetch("http://localhost:3000/get-states");
+        const response = await fetch("https://los-santos-elite-2gyo.onrender.com/get-states");
         const data = await response.json();
         const propertyStateList = document.querySelector(".propertyStateList");
         data.forEach((state) => {
@@ -239,7 +229,7 @@ const displayStates = async () => {
 
 const loadFromSaved = async (id) => {
     try {
-        const response = await fetch("http://localhost:3000/get-saved-details", {
+        const response = await fetch("https://los-santos-elite-2gyo.onrender.com/get-saved-details", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -609,7 +599,7 @@ createListingButton.addEventListener("click", async () => {
     if (!addDescriptions()) return;
     const { _id, ...reqDetails } = details;
     try {
-        const result = await fetch("http://localhost:3000/create-new-listing", {
+        const result = await fetch("https://los-santos-elite-2gyo.onrender.com/create-new-listing", {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
