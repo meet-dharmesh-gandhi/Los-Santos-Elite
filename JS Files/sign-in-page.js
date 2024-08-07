@@ -2,6 +2,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const newAccount = urlParams.get("new-account");
 const nextPage = urlParams.get("goto");
 
+const serverURL = "https://los-santos-elite-2gyo.onrender.com";
 
 if (newAccount === "true") {
   let toast = document.querySelector("#liveToastBtn");
@@ -53,7 +54,7 @@ animationEnd.addEventListener("animationend", () => {
 
 const checkUserExistence = async (username, password) => {
   try {
-    const response = await fetch("https://los-santos-elite-render-test.onrender.com/check-user-existence", {
+    const response = await fetch(serverURL + "/check-user-existence", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -67,7 +68,7 @@ const checkUserExistence = async (username, password) => {
     if (data === "Incorrect Username or Password") {
       alert("Incorrect Username or Password");
     } else {
-      const setUserDetails = await fetch("https://los-santos-elite-render-test.onrender.com/login", {
+      const setUserDetails = await fetch(serverURL + "/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
